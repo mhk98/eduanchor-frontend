@@ -46,7 +46,7 @@ const MultilingualHighlights = ({ data }) => {
                       } ${data.id === 3 ? "bg-color-secondary" : ""}`}
                     >
                       <Image
-                        src={`http://localhost:5000/media/${data.image}`}
+                        src={`https://server.eaconsultancy.info/${data.image}`}
                         alt={`flag-${i}`}
                         width={50}
                         height={50}

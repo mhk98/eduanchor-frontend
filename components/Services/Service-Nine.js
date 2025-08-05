@@ -38,7 +38,7 @@ const ServiceNine = ({ data }) => {
                     <div className="rbt-flipbox-front rbt-flipbox-face inner">
                       <div className="icon">
                         <Image
-                          src={`http://localhost:5000/media/${data.image}`}
+                          src={`https://server.eaconsultancy.info/${data.image}`}
                           width={55}
                           height={55}
                           alt="card-icon"

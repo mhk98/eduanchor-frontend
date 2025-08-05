@@ -46,7 +46,7 @@ const AboutTwo = ({ data }) => {
                     style={style1}
                   >
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image1}`}
+                      src={`https://server.eaconsultancy.info/${data.image1}`}
                       width={366}
                       height={490}
                       alt="Education Images"
@@ -58,7 +58,7 @@ const AboutTwo = ({ data }) => {
                     style={style2}
                   >
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image2}`}
+                      src={`https://server.eaconsultancy.info/${data.image2}`}
                       width={308}
                       height={250}
                       alt="Education Images"
@@ -70,7 +70,7 @@ const AboutTwo = ({ data }) => {
                     style={style3}
                   >
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image3}`}
+                      src={`https://server.eaconsultancy.info/${data.image3}`}
                       width={405}
                       height={490}
                       alt="Education Images"
@@ -79,7 +79,7 @@ const AboutTwo = ({ data }) => {
 
                   <div className="thumbnail image-1">
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image1}`}
+                      src={`https://server.eaconsultancy.info/${data.image1}`}
                       width={366}
                       height={490}
                       alt="Education Images"
@@ -88,7 +88,7 @@ const AboutTwo = ({ data }) => {
 
                   <div className="thumbnail image-2">
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image2}`}
+                      src={`https://server.eaconsultancy.info/${data.image2}`}
                       width={308}
                       height={250}
                       alt="Education Images"
@@ -97,7 +97,7 @@ const AboutTwo = ({ data }) => {
 
                   <div className="thumbnail image-3">
                     <Image
-                      src={`https://server.eaconsultancy.info/media/${data.image3}`}
+                      src={`https://server.eaconsultancy.info/${data.image3}`}
                       width={405}
                       height={490}
                       alt="Education Images"

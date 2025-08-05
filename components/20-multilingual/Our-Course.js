@@ -50,7 +50,7 @@ const OurCourse = ({ data }) => {
                     <li className="nav-item" role="presentation" key={i}>
                       <span className="icon">
                         <Image
-                          src={`http://localhost:5000/media/${data.image}`}
+                          src={`https://server.eaconsultancy.info/${data.image}`}
                           width={20}
                           height={20}
                           alt="Flag Icon"

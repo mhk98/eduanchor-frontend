@@ -70,7 +70,7 @@ const StudentFeedback = ({ data }) => {
                           <div className="clint-info-wrapper">
                             <div className="thumb">
                               <Image
-                                src={`http://localhost:5000/media/${data.image}`}
+                                src={`https://server.eaconsultancy.info/${data.image}`}
                                 width={494}
                                 height={494}
                                 alt="Clint Images"

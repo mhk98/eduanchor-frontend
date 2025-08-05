@@ -24,7 +24,7 @@ const AdvancetabTwo = ({ data }) => {
                   >
                     <div className="thumbnail">
                       <Image
-                        src={`https://server.eaconsultancy.info/media/${data.image}`}
+                        src={`https://server.eaconsultancy.info/${data.image}`}
                         width={860}
                         height={620}
                         alt="advance-tab-image"
