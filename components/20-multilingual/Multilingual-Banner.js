@@ -161,7 +161,7 @@ const MultilingualBanner = ({ data }) => {
                       {bannerFiles.map((file, i) => (
                         <div className="flag" key={i} tabIndex={0}>
                           <Image
-                            src={`https://server.eaconsultancy.info/${file}`}
+                            src={`https://server.eaconsultancy.info/media/${file}`}
                             alt={`flag-${i}`}
                             width={50}
                             height={50}
