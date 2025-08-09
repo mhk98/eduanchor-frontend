@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function middleware(req) {
   // Send PageView event server-side
-  fetch(`https://graph.facebook.com/v17.0/${FB_PIXEL_ID}/events`, {
+  fetch(`https://graph.facebook.com/v17.0/${process.env.FB_PIXEL_ID}/events`, {
     method: "POST",
     body: JSON.stringify({
       data: [
@@ -12,7 +12,7 @@ export async function middleware(req) {
           user_data: {},
         },
       ],
-      access_token: FB_CONVERSION_API_TOKEN,
+      access_token: process.env.FB_CONVERSION_API_TOKEN,
     }),
     headers: { "Content-Type": "application/json" },
   }).catch(() => {});

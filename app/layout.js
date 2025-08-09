@@ -21,8 +21,6 @@ import "swiper/css/thumbs";
 
 import "../public/scss/styles.scss";
 
-const PIXEL_ID = 754564680801544; // Replace with your actual Facebook Pixel ID
-
 export default function RootLayout({ children }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
@@ -44,7 +42,7 @@ export default function RootLayout({ children }) {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${PIXEL_ID}');
+              fbq('init', '${process.env.FB_PIXEL_ID}');
               fbq('track', 'PageView');
             `,
           }}
