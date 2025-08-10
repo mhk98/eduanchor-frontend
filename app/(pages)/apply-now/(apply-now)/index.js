@@ -10,10 +10,9 @@ const ApplyNowPage = () => {
   useEffect(() => {
     const eventId = uuidv4();
 
-    // Client-side
-    fbqTrack("Consultation", {
+    // // Client-side
+    fbqTrack("ApplyNowClick", {
       event_name: "Consultation Lead",
-      event_category: "Submission Form",
       event_id: eventId,
     });
 
@@ -24,7 +23,6 @@ const ApplyNowPage = () => {
       body: JSON.stringify({
         eventId,
         event_name: "Consultation Lead",
-        event_category: "Submission Form",
       }),
     });
   }, []);
