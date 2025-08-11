@@ -34,7 +34,7 @@ const HeaderTopEight = ({
                     <div className="rbt-header-content">
                       <div className="header-info">
                         <ul className="rbt-information-list">
-                          <li>
+                          {/* <li>
                             <Link href="#">
                               <i className="fab fa-instagram"></i>
                               {item.insFollowers}k
@@ -51,7 +51,7 @@ const HeaderTopEight = ({
                                 {item.type}
                               </span>
                             </Link>
-                          </li>
+                          </li> */}
                           {router.pathname === "/10-online-course" ? (
                             ""
                           ) : (
@@ -72,9 +72,9 @@ const HeaderTopEight = ({
                         <div className="rbt-header-top-news">
                           <div className="inner">
                             <div className="content">
-                              <span className="rbt-badge variation-02 bg-color-primary color-white radius-round">
+                              {/* <span className="rbt-badge variation-02 bg-color-primary color-white radius-round">
                                 {item.badgeText}
-                              </span>
+                              </span> */}
                               <span className="news-text">
                                 <Image
                                   src={item.img}
@@ -98,35 +98,35 @@ const HeaderTopEight = ({
                         <div className="header-info d-none d-xl-block">
                           <ul className="social-share-transparent">
                             <li>
-                              <Link href="#">
+                              <Link href="https://www.facebook.com/eaconsultancy.info">
                                 <i className="fab fa-facebook-f"></i>
                               </Link>
                             </li>
-                            <li>
+                            {/* <li>
                               <Link href="#">
                                 <i className="fab fa-twitter"></i>
                               </Link>
-                            </li>
+                            </li> */}
                             <li>
-                              <Link href="#">
+                              <Link href="https://www.linkedin.com/company/eaconsultancy/">
                                 <i className="fab fa-linkedin-in"></i>
                               </Link>
                             </li>
                             <li>
-                              <Link href="#">
-                                <i className="fab fa-instagram"></i>
+                              <Link href="https://www.youtube.com/@EAConsultancy-Bangladesh">
+                                <i className="fa-brands fa-youtube text-red"></i>
                               </Link>
                             </li>
                           </ul>
                         </div>
                       )}
-                      {router.pathname === "/10-online-course" ? (
+                      {/* {router.pathname === "/10-online-course" ? (
                         ""
                       ) : (
                         <div className="rbt-separator d-none d-xl-block"></div>
-                      )}
+                      )} */}
 
-                      <div className="header-info">
+                      {/* <div className="header-info">
                         <ul className="rbt-dropdown-menu switcher-language">
                           {item.language.map((lng, innerIndex) => (
                             <li className="has-child-menu" key={innerIndex}>
@@ -191,7 +191,7 @@ const HeaderTopEight = ({
                             </li>
                           ))}
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

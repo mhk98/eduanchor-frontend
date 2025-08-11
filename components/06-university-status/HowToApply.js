@@ -24,12 +24,12 @@ const HowToApply = ({ data }) => {
             </div>
             <div className="col-lg-6 col-md-6 col-12">
               <div className="read-more-btn text-start text-md-end">
-                <Link className="rbt-moderbt-btn" href="#">
+                {/* <Link className="rbt-moderbt-btn" href="#">
                   <span className="moderbt-btn-text">
                     View All Requirements
                   </span>
                   <i className="feather-arrow-right"></i>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

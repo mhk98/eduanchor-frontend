@@ -21,7 +21,7 @@ const HeaderTopBar = () => {
                 <div className="inner justify-content-center">
                   <div className="content">
                     <span className="rbt-badge variation-02 bg-color-primary color-white radius-round">
-                      Limited Time Offer
+                      Limited Time Offers
                     </span>
                     <span className="news-text color-white-off">
                       <Image src={emoji} alt="Hand Emojji Images" /> Intro

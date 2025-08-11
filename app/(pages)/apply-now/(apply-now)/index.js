@@ -54,7 +54,9 @@ const ApplyNowPage = () => {
       );
       console.log("Success:", response.data);
       if (response.status === 200) {
-        alert("Form submitted successfully!");
+        alert(
+          "Thank you for your interest. One of our expert counselors will contact you soon."
+        );
         reset();
       }
     } catch (error) {
@@ -73,9 +75,9 @@ const ApplyNowPage = () => {
           Book your free consultation
         </h3>
         <p className="text-center text-muted mb-4 fs-5">
-          A dedicated member of the LCI Group team will contact you within 24
-          hours to arrange your initial consultation with one of our education
-          experts.
+          A dedicated member of the EA Consultancy team will contact you within
+          24 hours to arrange your initial consultation with one of our
+          education experts.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -150,8 +152,21 @@ const ApplyNowPage = () => {
                 {...register("destination", { required: true })}
               >
                 <option value="">Select your destination</option>
-                <option>Bangladeshi</option>
-                <option>Indian</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Belgium</option>
+                <option>Canada</option>
+                <option>China</option>
+                <option>Cyprus</option>
+                <option>Denmark</option>
+                <option>Dubai</option>
+                <option>Finland</option>
+                <option>Germany</option>
+                <option>Hungary</option>
+                <option>Malaysia</option>
+                <option>Sweden</option>
+                <option>UK</option>
+                <option>USA</option>
                 <option>Other</option>
               </select>
               {errors.destination && (
@@ -177,12 +192,12 @@ const ApplyNowPage = () => {
 
             <div className="col-md-6">
               <label htmlFor="ielts" className="form-label fw-semibold fs-4">
-                IELTS *
+                IELTS / TOEFL / PTE / Duolingo / Other English Test
               </label>
               <select
                 id="ielts"
                 className="form-select fs-4"
-                {...register("ielts", { required: true })}
+                {...register("ielts")}
               >
                 <option value="">Select type</option>
                 <option>Yes</option>
@@ -200,12 +215,12 @@ const ApplyNowPage = () => {
                 htmlFor="ieltsScore"
                 className="form-label fw-semibold fs-4"
               >
-                IELTS Score*
+                English Test Score
               </label>
               <input
                 id="ieltsScore"
                 className="form-control fs-4"
-                {...register("ieltsScore", { required: true })}
+                {...register("ieltsScore")}
               />
               {errors.ieltsScore && (
                 <small className="text-danger">
@@ -226,13 +241,8 @@ const ApplyNowPage = () => {
                 <option value="">Select Location</option>
                 <option value="Khulna">Khulna</option>
                 <option value="Satkhira">Satkhira</option>
-                <option value="Tangail">Tangail</option>
                 <option value="Jashore">Jashore</option>
-                <option value="Rangpur">Rangpur</option>
-                <option value="Dinajpur">Dinajpur</option>
-                <option value="Gopalganj">Gopalganj</option>
-                <option value="Savar">Savar</option>
-                <option value="Feni">Feni</option>
+                <option value="Dhaka">Dhaka</option>
               </select>
               {errors.location && (
                 <small className="text-danger">
@@ -405,8 +415,8 @@ const ApplyNowPage = () => {
                 id="agree1"
               />
               <label className="form-check-label" htmlFor="agree1">
-                I agree to receive communications and useful resources from LCI
-                Group.
+                I agree to receive communications and useful resources from EA
+                Consultancy.
               </label>
             </div>
 

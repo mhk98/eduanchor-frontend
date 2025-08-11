@@ -29,11 +29,13 @@ const OurCourse = ({ data }) => {
             <div className="col-lg-12">
               <div className="section-title text-center">
                 <h6 className="b2 mb--15">
-                  <span className="theme-gradient">Our Course</span>
+                  <span className="theme-gradient">
+                    Choose Your Destination
+                  </span>
                 </h6>
                 <h2 className="title w-600">
-                  Limitlesss Learning, More <br />{" "}
-                  <span className="theme-gradient">Possibilities</span>
+                  {/* Limitlesss Learning, More <br />{" "} */}
+                  <span className="">Coutries We Work With</span>
                 </h2>
               </div>
             </div>

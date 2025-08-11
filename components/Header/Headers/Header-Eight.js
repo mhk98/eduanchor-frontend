@@ -52,7 +52,7 @@ const HeaderEight = ({
             <div className="header-left rbt-header-content">
               <div className="header-info">
                 <div className="logo">
-                  <Link href="/">
+                  {/* <Link href="/">
                     {isLightTheme ? (
                       <Image
                         src={logo}
@@ -70,6 +70,9 @@ const HeaderEight = ({
                         alt="Education Logo Images"
                       />
                     )}
+                  </Link> */}
+                  <Link href="/">
+                    <h3 className="logo-text">EA CONSULTANCY</h3>
                   </Link>
                 </div>
               </div>

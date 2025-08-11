@@ -56,23 +56,29 @@ const ServiceNine = ({ data }) => {
                     </div>
                     <div className="rbt-flipbox-back rbt-flipbox-face inner">
                       <ul className="rbt-list-style-3 color-white">
-                        <li className="d-flex align-items-center gap-2">
-                          <p>Requirements: {data.requirements}</p>
+                        <li className="d-flex align-items-center gap-2 ">
+                          <p className="fs-4">
+                            Requirements: {data.requirements}
+                          </p>
                         </li>
                         <li className="d-flex align-items-center gap-2">
-                          <p>Programs: {data.programs}</p>
+                          <p className="fs-4">Programs: {data.programs}</p>
                         </li>
                         <li className="d-flex align-items-center gap-2">
-                          <p>IELTS: {data.IELTS}</p>
+                          <p className="fs-4">IELTS: {data.IELTS}</p>
                         </li>
                         <li className="d-flex align-items-center gap-2">
-                          <p>Solvency: {data.solvency}</p>
+                          <p className="fs-4">Solvency: {data.solvency}</p>
                         </li>
                         <li className="d-flex align-items-center gap-2">
-                          <p>Processing Time: {data.processing}</p>
+                          <p className="fs-4">
+                            Processing Time: {data.processing}
+                          </p>
                         </li>
                         <li className="d-flex align-items-center gap-2">
-                          <p>Scholarships: {data.scholarships}</p>
+                          <p className="fs-4">
+                            Scholarships: {data.scholarships}
+                          </p>
                         </li>
                       </ul>
                       <Link

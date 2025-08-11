@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { FiHeadphones } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
-import { IoLocationOutline } from "react-icons/io5";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+
 const Contact = ({ data }) => {
   const [file, setFile] = useState(null);
   const [captchaToken, setCaptchaToken] = useState(null);
@@ -32,7 +32,7 @@ const Contact = ({ data }) => {
     payload.append("email", formData.email);
     payload.append("phone", formData.phone);
     payload.append("message", formData.message);
-    payload.append("captchaToken", captchaToken); // Optional: send to backend
+    payload.append("captchaToken", captchaToken);
     if (file) payload.append("file", file);
 
     try {
@@ -62,41 +62,101 @@ const Contact = ({ data }) => {
     }
   };
 
-  const ContactData = data?.data;
+  useEffect(() => {
+    import("venobox/dist/venobox.min.js").then((venobox) => {
+      new venobox.default({
+        selector: ".popup-video",
+      });
+    });
+  }, []);
+
+  const branches = [
+    {
+      name: "DHAKA",
+      phone: "+8801618274549",
+      address: "Flat-G2 House 5/1Block-E, Lalmatia. Dhaka-1207",
+      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+    },
+    {
+      name: "KHULNA",
+      phone: "+8801618274549",
+      address: "House EX3, Road 28, Nirala Abashik, Khulna",
+      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+    },
+    {
+      name: "SATKHIRA",
+      phone: "+8801751-073544",
+      address:
+        "Robiul Plaza, Holding - 8925, Govt. College More-1st Gate, 9400 Satkhira",
+      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+    },
+    {
+      name: "JASHORE",
+      phone: "+8801818-812058",
+      address:
+        "Holding No. 0103-01, Abdul Aziz Road, Puratan Kashimpur, Kazipara, Jashore Sadar (7400), Jashore.",
+      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+    },
+  ];
 
   return (
     <>
-      {ContactData?.map((info, index) => (
-        <div className="row g-5" key={index}>
-          <div className="rbt-address col-md-4 ">
-            <div className="icon">
-              <FiHeadphones />
+      <Swiper
+        className="testimonial-item-3-activation swiper rbt-arrow-between icon-bg-gray rbt-dot-bottom-center pb--60 pb_sm--50 gutter-swiper-30"
+        slidesPerView={1}
+        modules={[Navigation, Pagination]}
+        pagination={{
+          el: ".rbt-swiper-pagination",
+          clickable: true,
+        }}
+        navigation={{
+          nextEl: ".rbt-arrow-left",
+          prevEl: ".rbt-arrow-right",
+        }}
+        breakpoints={{
+          575: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+        }}
+      >
+        {branches.map((branch, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="card border-0 shadow-sm h-100">
+              <img
+                src={branch.img}
+                width={400}
+                height={250}
+                alt={`${branch.name} branch`}
+                className="img-fluid"
+              />
+              <div className="card-body text-center bg-white text-dark">
+                <h4 className="fw-bold">{branch.name}</h4>
+                <p className="mb-1">
+                  <i className="fas fa-phone-alt text-danger"></i>{" "}
+                  {branch.phone}
+                </p>
+                <p className="small">{branch.address}</p>
+              </div>
             </div>
-            <div className="inner">
-              <h4 className="title">Contact Phone Number</h4>
-              <p>{info.phone}</p>
-            </div>
-          </div>
-          <div className="rbt-address col-md-4">
-            <div className="icon">
-              <MdOutlineEmail />
-            </div>
-            <div className="inner">
-              <h4 className="title">Our Email Address</h4>
-              <p>{info.email}</p>
-            </div>
-          </div>
-          <div className="rbt-address col-md-4">
-            <div className="icon">
-              <IoLocationOutline />
-            </div>
-            <div className="inner">
-              <h4 className="title">Our Location</h4>
-              <p>{info.location}</p>
-            </div>
+          </SwiperSlide>
+        ))}
+
+        <div className="rbt-swiper-arrow rbt-arrow-left">
+          <div className="custom-overfolow">
+            <i className="rbt-icon feather-arrow-left"></i>
+            <i className="rbt-icon-top feather-arrow-left"></i>
           </div>
         </div>
-      ))}
+
+        <div className="rbt-swiper-arrow rbt-arrow-right">
+          <div className="custom-overfolow">
+            <i className="rbt-icon feather-arrow-right"></i>
+            <i className="rbt-icon-top feather-arrow-right"></i>
+          </div>
+        </div>
+
+        <div className="rbt-swiper-pagination"></div>
+      </Swiper>
 
       <div className="row justify-content-center my-5">
         <div className="col-lg-8">
