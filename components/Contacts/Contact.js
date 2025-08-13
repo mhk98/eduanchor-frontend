@@ -70,40 +70,17 @@ const Contact = ({ data }) => {
     });
   }, []);
 
-  const branches = [
-    {
-      name: "DHAKA",
-      phone: "+8801618274549",
-      address: "Flat-G2 House 5/1Block-E, Lalmatia. Dhaka-1207",
-      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
-    },
-    {
-      name: "KHULNA",
-      phone: "+8801618274549",
-      address: "House EX3, Road 28, Nirala Abashik, Khulna",
-      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
-    },
-    {
-      name: "SATKHIRA",
-      phone: "+8801751-073544",
-      address:
-        "Robiul Plaza, Holding - 8925, Govt. College More-1st Gate, 9400 Satkhira",
-      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
-    },
-    {
-      name: "JASHORE",
-      phone: "+8801818-812058",
-      address:
-        "Holding No. 0103-01, Abdul Aziz Road, Puratan Kashimpur, Kazipara, Jashore Sadar (7400), Jashore.",
-      img: "https://i.ibb.co.com/MBdw62v/pexels-mark-mccammon-1080696.jpg",
-    },
-  ];
+  const branches = data?.data;
 
   return (
     <>
+      <h4 className="text-center fw-bold pb--60">
+        EA CONSULTANCY LTD IS NOW IN
+      </h4>
       <Swiper
-        className="testimonial-item-3-activation swiper rbt-arrow-between icon-bg-gray rbt-dot-bottom-center pb--60 pb_sm--50 gutter-swiper-30"
+        className="testimonial-item-3-activation swiper rbt-arrow-between icon-bg-gray rbt-dot-bottom-center pb--60 pb_sm--50 gutter-swiper-30 gap-5"
         slidesPerView={1}
+        spaceBetween={20}
         modules={[Navigation, Pagination]}
         pagination={{
           el: ".rbt-swiper-pagination",
@@ -119,23 +96,26 @@ const Contact = ({ data }) => {
           992: { slidesPerView: 3 },
         }}
       >
-        {branches.map((branch, idx) => (
+        {branches.map((item, idx) => (
           <SwiperSlide key={idx}>
-            <div className="card border-0 shadow-sm h-100">
+            <div className="card border-0 shadow-sm h-100 branch-card">
               <img
-                src={branch.img}
-                width={400}
-                height={250}
-                alt={`${branch.name} branch`}
-                className="img-fluid"
+                src={`https://server.eaconsultancy.info/${item.image}`}
+                alt={item.image}
+                className="card-img-top"
+                style={{
+                  height: "200px",
+                  objectFit: "cover",
+                  borderTopLeftRadius: "0.5rem",
+                  borderTopRightRadius: "0.5rem",
+                }}
               />
-              <div className="card-body text-center bg-white text-dark">
-                <h4 className="fw-bold">{branch.name}</h4>
-                <p className="mb-1">
-                  <i className="fas fa-phone-alt text-danger"></i>{" "}
-                  {branch.phone}
+              <div className="card-body text-center">
+                <h5 className="fw-bold">{item.branch}</h5>
+                <p className="mb-1 text-muted">
+                  <i className="fas fa-phone-alt text-danger"></i> {item.phone}
                 </p>
-                <p className="small">{branch.address}</p>
+                <p className="small text-secondary">{item.location}</p>
               </div>
             </div>
           </SwiperSlide>
@@ -313,3 +293,284 @@ const Contact = ({ data }) => {
 };
 
 export default Contact;
+
+// import Link from "next/link";
+// import { useForm } from "react-hook-form";
+// import { useState, useRef, useEffect } from "react";
+// import ReCAPTCHA from "react-google-recaptcha";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+
+// const Contact = ({ data }) => {
+//   const [file, setFile] = useState(null);
+//   const [captchaToken, setCaptchaToken] = useState(null);
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const recaptchaRef = useRef(null);
+
+//   const {
+//     register,
+//     handleSubmit,
+//     reset,
+//     formState: { errors },
+//   } = useForm();
+
+//   const handleFileChange = (e) => setFile(e.target.files[0]);
+
+//   const onSubmit = async (formData) => {
+//     if (!captchaToken) {
+//       alert("Please verify you are a human!");
+//       return;
+//     }
+
+//     const payload = new FormData();
+//     Object.entries(formData).forEach(([key, value]) =>
+//       payload.append(key, value)
+//     );
+//     payload.append("captchaToken", captchaToken);
+//     if (file) payload.append("file", file);
+
+//     try {
+//       setIsSubmitting(true);
+//       const response = await fetch(
+//         "https://api.eaconsultancy.info/api/v1/contact/create",
+//         {
+//           method: "POST",
+//           body: payload,
+//         }
+//       );
+
+//       if (response.ok) {
+//         alert("Message submitted successfully!");
+//         reset();
+//         setFile(null);
+//         setCaptchaToken(null);
+//         recaptchaRef.current.reset();
+//       } else {
+//         alert("Something went wrong. Please try again.");
+//       }
+//     } catch (error) {
+//       console.error("Submission error:", error);
+//       alert("An error occurred. Please try again later.");
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
+
+//   const branches = [
+//     {
+//       name: "DHAKA",
+//       phone: "+8801618274549",
+//       address: "Flat-G2 House 5/1Block-E, Lalmatia. Dhaka-1207",
+//       img: "https://i.ibb.co/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+//     },
+//     {
+//       name: "KHULNA",
+//       phone: "+8801618274549",
+//       address: "House EX3, Road 28, Nirala Abashik, Khulna",
+//       img: "https://i.ibb.co/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+//     },
+//     {
+//       name: "SATKHIRA",
+//       phone: "+8801751-073544",
+//       address:
+//         "Robiul Plaza, Holding - 8925, Govt. College More-1st Gate, 9400 Satkhira",
+//       img: "https://i.ibb.co/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+//     },
+//     {
+//       name: "JASHORE",
+//       phone: "+8801818-812058",
+//       address:
+//         "Holding No. 0103-01, Abdul Aziz Road, Puratan Kashimpur, Kazipara, Jashore Sadar (7400), Jashore.",
+//       img: "https://i.ibb.co/MBdw62v/pexels-mark-mccammon-1080696.jpg",
+//     },
+//   ];
+
+//   return (
+//     <div className="container py-5">
+//       {/* Branches */}
+//       <h2 className="text-center fw-bold mb-4">Our Branches</h2>
+//       <Swiper
+//         slidesPerView={1}
+//         spaceBetween={20}
+//         modules={[Navigation, Pagination]}
+//         pagination={{ clickable: true }}
+//         navigation
+//         breakpoints={{
+//           576: { slidesPerView: 1 },
+//           768: { slidesPerView: 2 },
+//           992: { slidesPerView: 3 },
+//         }}
+//       >
+//         {branches.map((branch, idx) => (
+//           <SwiperSlide key={idx}>
+//             <div className="card border-0 shadow-sm h-100 branch-card">
+//               <img
+//                 src={branch.img}
+//                 alt={branch.name}
+//                 className="card-img-top"
+//                 style={{
+//                   height: "200px",
+//                   objectFit: "cover",
+//                   borderTopLeftRadius: "0.5rem",
+//                   borderTopRightRadius: "0.5rem",
+//                 }}
+//               />
+//               <div className="card-body text-center">
+//                 <h5 className="fw-bold">{branch.name}</h5>
+//                 <p className="mb-1 text-muted">
+//                   <i className="fas fa-phone-alt text-danger"></i>{" "}
+//                   {branch.phone}
+//                 </p>
+//                 <p className="small text-secondary">{branch.address}</p>
+//               </div>
+//             </div>
+//           </SwiperSlide>
+//         ))}
+//       </Swiper>
+
+//       {/* Contact Form */}
+//       <div className="row justify-content-center mt-5">
+//         <div className="col-lg-8">
+//           <div className="card shadow-lg border-0 p-4 p-md-5">
+//             <h3 className="fw-bold mb-4 text-center">Get in Touch</h3>
+//             <form
+//               onSubmit={handleSubmit(onSubmit)}
+//               encType="multipart/form-data"
+//             >
+//               <div className="row g-3">
+//                 {/* First Name */}
+//                 <div className="col-md-6">
+//                   <label className="form-label">First Name *</label>
+//                   <input
+//                     className="form-control"
+//                     {...register("firstName", {
+//                       required: "First name is required",
+//                     })}
+//                   />
+//                   {errors.firstName && (
+//                     <small className="text-danger">
+//                       {errors.firstName.message}
+//                     </small>
+//                   )}
+//                 </div>
+
+//                 {/* Last Name */}
+//                 <div className="col-md-6">
+//                   <label className="form-label">Last Name *</label>
+//                   <input
+//                     className="form-control"
+//                     {...register("lastName", {
+//                       required: "Last name is required",
+//                     })}
+//                   />
+//                   {errors.lastName && (
+//                     <small className="text-danger">
+//                       {errors.lastName.message}
+//                     </small>
+//                   )}
+//                 </div>
+
+//                 {/* Email */}
+//                 <div className="col-md-6">
+//                   <label className="form-label">Email *</label>
+//                   <input
+//                     type="email"
+//                     className="form-control"
+//                     {...register("email", {
+//                       required: "Email is required",
+//                       pattern: {
+//                         value: /^\S+@\S+$/i,
+//                         message: "Invalid email format",
+//                       },
+//                     })}
+//                   />
+//                   {errors.email && (
+//                     <small className="text-danger">
+//                       {errors.email.message}
+//                     </small>
+//                   )}
+//                 </div>
+
+//                 {/* Phone */}
+//                 <div className="col-md-6">
+//                   <label className="form-label">Phone *</label>
+//                   <input
+//                     type="tel"
+//                     className="form-control"
+//                     {...register("phone", {
+//                       required: "Phone number is required",
+//                     })}
+//                   />
+//                   {errors.phone && (
+//                     <small className="text-danger">
+//                       {errors.phone.message}
+//                     </small>
+//                   )}
+//                 </div>
+
+//                 {/* Message */}
+//                 <div className="col-12">
+//                   <label className="form-label">Message *</label>
+//                   <textarea
+//                     rows="4"
+//                     className="form-control"
+//                     {...register("message", {
+//                       required: "Message is required",
+//                     })}
+//                   ></textarea>
+//                   {errors.message && (
+//                     <small className="text-danger">
+//                       {errors.message.message}
+//                     </small>
+//                   )}
+//                 </div>
+
+//                 {/* File Upload */}
+//                 <div className="col-12">
+//                   <label className="form-label">
+//                     Attach Document (optional)
+//                   </label>
+//                   <input
+//                     type="file"
+//                     accept="image/*,application/pdf"
+//                     onChange={handleFileChange}
+//                     className="form-control"
+//                   />
+//                 </div>
+//               </div>
+
+//               {/* Captcha & Submit */}
+//               <div className="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 gap-3">
+//                 <ReCAPTCHA
+//                   sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+//                   onChange={(token) => setCaptchaToken(token)}
+//                   onExpired={() => setCaptchaToken(null)}
+//                   ref={recaptchaRef}
+//                 />
+//                 <button
+//                   type="submit"
+//                   className="btn btn-dark px-4 py-2 fw-bold"
+//                   disabled={isSubmitting}
+//                 >
+//                   {isSubmitting ? "Submitting..." : "Submit"}
+//                 </button>
+//               </div>
+//             </form>
+//           </div>
+//         </div>
+//       </div>
+
+//       <style jsx>{`
+//         .branch-card:hover {
+//           transform: translateY(-5px);
+//           transition: 0.3s;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// };
+
+// export default Contact;
