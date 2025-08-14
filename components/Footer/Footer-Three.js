@@ -21,7 +21,7 @@ const FooterThree = () => {
                 <div className="row row--15 mt_dec--30" key={index}>
                   <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
                     <div className="footer-widget">
-                      <div className="logo">
+                      <div className="fw-bold title">
                         <Link href="/">
                           {/* <Image
                             src={logo}

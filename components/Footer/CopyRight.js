@@ -12,7 +12,7 @@ const CopyRight = () => {
               <p className="rbt-link-hover text-center text-lg-start">
                 Copyright © 2025
                 <Link className="mx-2" href="https://rainbowthemes.net">
-                  Rainbow-Themes.
+                  EA Consultancy.
                 </Link>
                 All Rights Reserved
               </p>
