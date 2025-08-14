@@ -101,7 +101,8 @@ const Contact = ({ data }) => {
         {branches.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div className="card border-0 shadow-sm h-100 branch-card">
-              <img
+             
+              {item.image ?  <img
                 src={`https://server.eaconsultancy.info/${item.image}`}
                 alt={item.image}
                 className="card-img-top"
@@ -111,9 +112,9 @@ const Contact = ({ data }) => {
                   borderTopLeftRadius: "0.5rem",
                   borderTopRightRadius: "0.5rem",
                 }}
-              />
+              /> : "No image available"}
               <div className="card-body text-center">
-                <h5 className="fw-bold">{item.branch}</h5>
+                <h5 className="fw-bold">{item.branch || "Branch Name Not Available"}</h5>
                 <p className="mb-1 text-muted">
                   <i className="fas fa-phone-alt text-danger"></i> {item.phone}
                 </p>
