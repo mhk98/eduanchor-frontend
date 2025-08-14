@@ -3,13 +3,9 @@
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
-
 import Contact from "@/components/Contacts/Contact";
-import ContactForm from "@/components/Contacts/Contact-Form";
-import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
-import FooterOne from "@/components/Footer/Footer-One";
 
 const ContactPage = ({ data }) => {
   return (
@@ -29,7 +25,7 @@ const ContactPage = ({ data }) => {
                       Contact Us
                     </span>
                     <h2 className="title">
-                      Histudy Course Contact <br /> can join with us.
+                      {/* Histudy Course Contact <br /> can join with us. */}
                     </h2>
                   </div>
                 </div>

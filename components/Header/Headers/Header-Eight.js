@@ -78,7 +78,7 @@ const HeaderEight = ({
               </div>
 
               <div className="header-info d-none d-lg-block">
-                <Category />
+                {/* <Category /> */}
               </div>
             </div>
 

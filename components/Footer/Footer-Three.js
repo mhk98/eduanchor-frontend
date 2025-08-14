@@ -72,16 +72,17 @@ const FooterThree = () => {
                       <ul className="ft-link">
                         <li>
                           <span>Phone:</span>
-                          <Link href="#">{footer.phone}</Link>
+                          <Link href="#">+880 16 1827 4549</Link>
                         </li>
                         <li>
                           <span>E-mail:</span>
-                          <Link href="mailto:hr@example.com">
-                            {footer.mail}
+                          <Link href="mailto:support@eaconsultancy.info ">
+                            support@eaconsultancy.info
                           </Link>
                         </li>
                         <li>
-                          <span>Location:</span> {footer.address}
+                          <span>Location:</span> House EX3, Road 28, Nirala
+                          Abashik, 9000 Khulna
                         </li>
                       </ul>
                       <ul className="social-icon social-default icon-naked justify-content-start mt--20">

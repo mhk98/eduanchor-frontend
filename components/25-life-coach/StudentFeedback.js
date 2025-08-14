@@ -3,9 +3,8 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "venobox/dist/venobox.min.css";
-import TestimonialData from "../../data/elements/testimonial.json";
 
 const StudentFeedback = ({ data }) => {
   useEffect(() => {
@@ -22,47 +21,46 @@ const StudentFeedback = ({ data }) => {
       <div className="rbt-testimonial-area rbt-sec-cir-shadow-1 bg-color-extra2 rbt-section-gap">
         <div className="gradient-shape-top version-04"></div>
         <div className="gradient-shape-bottom verstion-04"></div>
-        {TestimonialData &&
-          TestimonialData?.map((data, index) => (
-            <div className="container" key={index}>
-              <div className="row">
-                <div className="col-lg-12 mb--60 mb_sm--50">
-                  <div className="section-title text-center">
-                    <span className="subtitle bg-primary-opacity">
-                      EDUCATION FOR EVERYONE
-                    </span>
-                    <h2 className="title w-600">Student's Feedback</h2>
-                  </div>
-                </div>
+
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 mb--60 mb_sm--50">
+              <div className="section-title text-center">
+                <span className="subtitle bg-primary-opacity">
+                  EDUCATION FOR EVERYONE
+                </span>
+                <h2 className="title w-600">Student's Feedback</h2>
               </div>
+            </div>
+          </div>
 
-              <Swiper
-                className="testimonial-item-3-activation swiper rbt-arrow-between icon-bg-gray rbt-dot-bottom-center pb--60 pb_sm--50 gutter-swiper-30"
-                slidesPerView={1}
-                modules={[Navigation, Pagination]}
-                pagination={{
-                  el: ".rbt-swiper-pagination",
-                  clickable: true,
-                }}
-                navigation={{
-                  nextEl: ".rbt-arrow-left",
-                  prevEl: ".rbt-arrow-right",
-                }}
-                breakpoints={{
-                  575: {
-                    slidesPerView: 1,
-                  },
-
-                  768: {
-                    slidesPerView: 2,
-                  },
-
-                  992: {
-                    slidesPerView: 3,
-                  },
-                }}
-              >
-                <SwiperSlide className="swiper-wrapper">
+          <Swiper
+            className="testimonial-item-3-activation swiper rbt-arrow-between icon-bg-gray rbt-dot-bottom-center pb--60 pb_sm--50 gutter-swiper-30 gap-5"
+            slidesPerView={1}
+            spaceBetween={20}
+            modules={[Navigation, Pagination, Autoplay]} // ✅ Include Autoplay
+            autoplay={{
+              delay: 3000, // ✅ Slide every 3 seconds
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true, // ✅ Pause on hover
+            }}
+            pagination={{
+              el: ".rbt-swiper-pagination",
+              clickable: true,
+            }}
+            navigation={{
+              nextEl: ".rbt-arrow-left",
+              prevEl: ".rbt-arrow-right",
+            }}
+            breakpoints={{
+              575: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+            }}
+          >
+            {Array.isArray(TestimonialData) && TestimonialData.length > 0 ? (
+              TestimonialData.map((data, idx) => (
+                <SwiperSlide key={idx} className="swiper-wrapper">
                   <div className="swiper-slide">
                     <div className="single-slide">
                       <div className="rbt-testimonial-box">
@@ -108,25 +106,28 @@ const StudentFeedback = ({ data }) => {
                     </div>
                   </div>
                 </SwiperSlide>
+              ))
+            ) : (
+              <p className="text-center">No feedback available.</p>
+            )}
 
-                <div className="rbt-swiper-arrow rbt-arrow-left">
-                  <div className="custom-overfolow">
-                    <i className="rbt-icon feather-arrow-left"></i>
-                    <i className="rbt-icon-top feather-arrow-left"></i>
-                  </div>
-                </div>
-
-                <div className="rbt-swiper-arrow rbt-arrow-right">
-                  <div className="custom-overfolow">
-                    <i className="rbt-icon feather-arrow-right"></i>
-                    <i className="rbt-icon-top feather-arrow-right"></i>
-                  </div>
-                </div>
-
-                <div className="rbt-swiper-pagination"></div>
-              </Swiper>
+            <div className="rbt-swiper-arrow rbt-arrow-left">
+              <div className="custom-overfolow">
+                <i className="rbt-icon feather-arrow-left"></i>
+                <i className="rbt-icon-top feather-arrow-left"></i>
+              </div>
             </div>
-          ))}
+
+            <div className="rbt-swiper-arrow rbt-arrow-right">
+              <div className="custom-overfolow">
+                <i className="rbt-icon feather-arrow-right"></i>
+                <i className="rbt-icon-top feather-arrow-right"></i>
+              </div>
+            </div>
+
+            <div className="rbt-swiper-pagination"></div>
+          </Swiper>
+        </div>
       </div>
     </>
   );
