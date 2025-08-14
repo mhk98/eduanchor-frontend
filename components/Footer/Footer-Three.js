@@ -23,13 +23,14 @@ const FooterThree = () => {
                     <div className="footer-widget">
                       <div className="logo">
                         <Link href="/">
-                          <Image
+                          {/* <Image
                             src={logo}
                             width={152}
                             height={50}
                             priority={true}
                             alt="Education Logo Images"
-                          />
+                          /> */}
+                          EA CONSULTANCY
                         </Link>
                       </div>
 
