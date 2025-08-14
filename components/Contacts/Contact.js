@@ -38,7 +38,7 @@ const Contact = ({ data }) => {
     try {
       setIsSubmitting(true);
       const response = await fetch(
-        "https://api.eaconsultancy.info/api/v1/contact/create",
+        "http://localhost:5000/api/v1/contact/create",
         {
           method: "POST",
           body: payload,
@@ -71,6 +71,8 @@ const Contact = ({ data }) => {
   }, []);
 
   const branches = data?.data;
+
+  console.log("branches", branches);
 
   return (
     <>
