@@ -1,7 +1,73 @@
+// "use client";
+// import React, { useEffect } from "react";
+// import { useForm } from "react-hook-form";
+// import axios from "axios";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import { v4 as uuidv4 } from "uuid";
+// import { fbqTrack } from "@/lib/fbq";
+
+// const ApplyNowPage = () => {
+//   useEffect(() => {
+//     const eventId = uuidv4();
+
+//     // // Client-side
+//     fbqTrack("ApplyNowClick", {
+//       event_name: "Consultation Lead",
+//       event_id: eventId,
+//     });
+
+//     // Server-side
+//     fetch("https://api.eaconsultancy.info/api/v1/pixel/create", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         eventId,
+//         event_name: "Consultation Lead",
+//       }),
+//     });
+//   }, []);
+
+//   const {
+//     register,
+//     handleSubmit,
+//     reset,
+//     formState: { errors },
+//   } = useForm();
+
+//   const onSubmit = async (data) => {
+//     let status = "websiteLeads";
+
+//     const cleanedData = {
+//       ...data,
+//       status,
+//       bachelorYear:
+//         data.bachelorYear === "" ? null : parseInt(data.bachelorYear),
+//       bachelorDepartment:
+//         data.bachelorDepartment === "" ? null : data.bachelorDepartment,
+//       bachelorCGPA: data.bachelorCGPA === "" ? null : data.bachelorCGPA,
+//     };
+//     try {
+//       window.scrollTo(0, 0);
+//       const response = await axios.post(
+//         "https://api.eaconsultancy.info/api/v1/consultation/create",
+//         cleanedData
+//       );
+//       console.log("Success:", response.data);
+//       if (response.status === 200) {
+//         alert(
+//           "Thank you for your interest. One of our expert counselors will contact you soon."
+//         );
+//         reset();
+//       }
+//     } catch (error) {
+//       console.error("Error:", error);
+//       alert("Something went wrong.");
+//     }
+//   };
+
 "use client";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { v4 as uuidv4 } from "uuid";
 import { fbqTrack } from "@/lib/fbq";
@@ -10,21 +76,23 @@ const ApplyNowPage = () => {
   useEffect(() => {
     const eventId = uuidv4();
 
-    // // Client-side
+    // Facebook Pixel Tracking
     fbqTrack("ApplyNowClick", {
       event_name: "Consultation Lead",
       event_id: eventId,
     });
 
-    // Server-side
+    // Send event ID to backend
     fetch("https://api.eaconsultancy.info/api/v1/pixel/create", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         eventId,
         event_name: "Consultation Lead",
       }),
-    });
+    }).catch((err) => console.error("Pixel tracking failed", err));
   }, []);
 
   const {
@@ -35,7 +103,7 @@ const ApplyNowPage = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    let status = "websiteLeads";
+    const status = "websiteLeads";
 
     const cleanedData = {
       ...data,
@@ -46,19 +114,32 @@ const ApplyNowPage = () => {
         data.bachelorDepartment === "" ? null : data.bachelorDepartment,
       bachelorCGPA: data.bachelorCGPA === "" ? null : data.bachelorCGPA,
     };
+
     try {
       window.scrollTo(0, 0);
-      const response = await axios.post(
+
+      const response = await fetch(
         "https://api.eaconsultancy.info/api/v1/consultation/create",
-        cleanedData
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(cleanedData),
+        }
       );
-      console.log("Success:", response.data);
-      if (response.status === 200) {
-        alert(
-          "Thank you for your interest. One of our expert counselors will contact you soon."
-        );
-        reset();
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
       }
+
+      const result = await response.json();
+      console.log("Success:", result);
+
+      alert(
+        "Thank you for your interest. One of our expert counselors will contact you soon."
+      );
+      reset();
     } catch (error) {
       console.error("Error:", error);
       alert("Something went wrong.");
