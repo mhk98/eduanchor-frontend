@@ -110,11 +110,7 @@ const AboutTwo = ({ data }) => {
               <div className="inner pl--50 pl_sm--0 pl_md--0">
                 <div className="section-title text-start">
                   {/* <span className="subtitle bg-coral-opacity">{data.tag}</span> */}
-                  <h2 className="title">
-                    {data.title}
-                    After Visa Service
-                    <br /> Charge
-                  </h2>
+                  <h2 className="title">{data.title}</h2>
                 </div>
 
                 <p className="description mt--30">{data.text}</p>

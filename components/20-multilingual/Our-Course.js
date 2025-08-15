@@ -44,13 +44,17 @@ const OurCourse = ({ data }) => {
             <div className="col-lg-12">
               <div className="rbt-course-tab-button-wrap">
                 <ul
-                  className="rbt-course-tab-button nav nav-tabs"
+                  className="rbt-course-tab-button nav nav-tabs justify-content-center flex-wrap gap-3"
                   id="rbt-myTab"
                   role="tablist"
                 >
                   {getAllCourse.map((data, i) => (
-                    <li className="nav-item" role="presentation" key={i}>
-                      <span className="icon">
+                    <li
+                      className="nav-item d-flex align-items-center gap-2"
+                      role="presentation"
+                      key={i}
+                    >
+                      <span className="icon d-flex align-items-center">
                         <Image
                           src={`https://server.eaconsultancy.info/${data.image}`}
                           width={20}
@@ -65,124 +69,6 @@ const OurCourse = ({ data }) => {
               </div>
             </div>
           </div>
-
-          {/* <div className="row">
-            <div className="col-12">
-              <div className="tab-content" id="rbt-myTabContent">
-                {getAllCourse.map((data, i) => (
-                  <div
-                    className={`tab-pane fade ${
-                      data.isActive ? "active show" : ""
-                    }`}
-                    id={data.category}
-                    role="tabpanel"
-                    aria-labelledby={`${data.category}-tab`}
-                    key={i}
-                  >
-                    <div className="row g-5">
-                      {data.body.map((innerData, index) => (
-                        <div
-                          className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12"
-                          // data-sal-delay="150"
-                          // data-sal="slide-up"
-                          // data-sal-duration="800"
-                          key={index}
-                        >
-                          <div className="rbt-card variation-03 rbt-hover">
-                            <div className="rbt-card-img">
-                              <Link
-                                className="thumbnail-link"
-                                href={`/course-withtab-two`}
-                              >
-                                <Image
-                                  src={innerData.img}
-                                  width={355}
-                                  height={244}
-                                  alt="Card image"
-                                />
-                                <span className="rbt-btn btn-white icon-hover btn-md">
-                                  <span className="btn-text">Read More</span>
-                                  <span className="btn-icon">
-                                    <i className="feather-arrow-right"></i>
-                                  </span>
-                                </span>
-                              </Link>
-                            </div>
-                            <div className="rbt-card-body">
-                              <h5 className="rbt-card-title">
-                                <Link href={`/course-withtab-two`}>
-                                  English Courses
-                                </Link>
-                              </h5>
-                              <div className="rbt-card-bottom">
-                                <Link
-                                  className="transparent-button"
-                                  href={`/course-withtab-two`}
-                                >
-                                  <i>
-                                    <svg
-                                      width="17"
-                                      height="12"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <g
-                                        stroke="#27374D"
-                                        fill="none"
-                                        fillRule="evenodd"
-                                      >
-                                        <path d="M10.614 0l5.629 5.629-5.63 5.629"></path>
-                                        <path
-                                          strokeLinecap="square"
-                                          d="M.663 5.572h14.594"
-                                        ></path>
-                                      </g>
-                                    </svg>
-                                  </i>
-                                </Link>
-                              </div>
-                            </div>
-                            <div className="card-information">
-                              <div className="card-flag">
-                                <Image
-                                  src={innerData.flagImg}
-                                  width={20}
-                                  height={20}
-                                  alt="united-kingdom"
-                                />
-                              </div>
-                              <div className="card-count">
-                                {innerData.totalCourse} programs
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="row mt--55">
-            <div className="col-lg-12">
-              <div className="load-more-btn text-center">
-                <Link
-                  className="rbt-btn btn-gradient btn-lg hover-icon-reverse"
-                  href="/course-card-3"
-                >
-                  <span className="icon-reverse-wrapper">
-                    <span className="btn-text">View All Courses</span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                  </span>
-                </Link>
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

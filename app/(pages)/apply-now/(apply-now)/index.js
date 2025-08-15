@@ -178,12 +178,12 @@ const ApplyNowPage = () => {
 
             <div className="col-md-6">
               <label htmlFor="address" className="form-label fw-semibold fs-4">
-                Full Address *
+                Full Address
               </label>
               <input
                 id="address"
                 className="form-control fs-4"
-                {...register("address", { required: true })}
+                {...register("address")}
               />
               {errors.address && (
                 <small className="text-danger">Full Address is required</small>
@@ -256,12 +256,12 @@ const ApplyNowPage = () => {
                 htmlFor="applicationCode"
                 className="form-label fw-semibold fs-4"
               >
-                Application Code *
+                Application Code
               </label>
               <input
                 id="applicationCode"
                 className="form-control fs-4"
-                {...register("applicationCode", { required: true })}
+                {...register("applicationCode")}
               />
               {errors.applicationCode && (
                 <small className="text-danger">
@@ -273,13 +273,13 @@ const ApplyNowPage = () => {
             {/* Academic Info */}
             <div className="col-md-6">
               <label htmlFor="sscYear" className="form-label fw-semibold fs-4">
-                SSC Year *
+                SSC Year
               </label>
               <input
                 id="sscYear"
                 type="number"
                 className="form-control"
-                {...register("sscYear", { required: true })}
+                {...register("sscYear")}
               />
               {errors.sscYear && (
                 <small className="text-danger">SSC Year is required</small>
@@ -290,12 +290,12 @@ const ApplyNowPage = () => {
                 htmlFor="sscDepartment"
                 className="form-label fw-semibold fs-4"
               >
-                SSC Department *
+                SSC Department
               </label>
               <input
                 id="sscDepartment"
-                className="form-control"
-                {...register("sscDepartment", { required: true })}
+                className="form-control fs-4"
+                {...register("sscDepartment")}
               />
               {errors.sscDepartment && (
                 <small className="text-danger">
@@ -305,12 +305,12 @@ const ApplyNowPage = () => {
             </div>
             <div className="col-md-6">
               <label htmlFor="sscCGPA" className="form-label fw-semibold fs-4">
-                SSC GPA/CGPA *
+                SSC GPA/CGPA
               </label>
               <input
                 id="sscCGPA"
-                className="form-control"
-                {...register("sscCGPA", { required: true })}
+                className="form-control fs-4"
+                {...register("sscCGPA")}
               />
               {errors.sscCGPA && (
                 <small className="text-danger">SSC GPA is required</small>
@@ -318,13 +318,13 @@ const ApplyNowPage = () => {
             </div>
             <div className="col-md-6">
               <label htmlFor="hscYear" className="form-label fw-semibold fs-4">
-                HSC Year *
+                HSC Year
               </label>
               <input
                 id="hscYear"
                 type="number"
-                className="form-control"
-                {...register("hscYear", { required: true })}
+                className="form-control fs-4"
+                {...register("hscYear")}
               />
               {errors.hscYear && (
                 <small className="text-danger">HSC Year is required</small>
@@ -335,12 +335,12 @@ const ApplyNowPage = () => {
                 htmlFor="hscDepartment"
                 className="form-label fw-semibold fs-4"
               >
-                HSC Department *
+                HSC Department
               </label>
               <input
                 id="hscDepartment"
-                className="form-control"
-                {...register("hscDepartment", { required: true })}
+                className="form-control fs-4"
+                {...register("hscDepartment")}
               />
               {errors.hscDepartment && (
                 <small className="text-danger">
@@ -350,12 +350,12 @@ const ApplyNowPage = () => {
             </div>
             <div className="col-md-6">
               <label htmlFor="hscCGPA" className="form-label fw-semibold fs-4">
-                HSC GPA/CGPA *
+                HSC GPA/CGPA
               </label>
               <input
                 id="hscCGPA"
-                className="form-control"
-                {...register("hscCGPA", { required: true })}
+                className="form-control fs-4"
+                {...register("hscCGPA")}
               />
               {errors.hscCGPA && (
                 <small className="text-danger">HSC GPA is required</small>
@@ -386,7 +386,7 @@ const ApplyNowPage = () => {
               </label>
               <input
                 id="bachelorDepartment"
-                className="form-control"
+                className="form-control fs-4"
                 {...register("bachelorDepartment")}
               />
             </div>
@@ -399,7 +399,7 @@ const ApplyNowPage = () => {
               </label>
               <input
                 id="bachelorCGPA"
-                className="form-control"
+                className="form-control fs-4"
                 {...register("bachelorCGPA")}
               />
             </div>

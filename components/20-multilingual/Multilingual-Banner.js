@@ -133,7 +133,9 @@ const MultilingualBanner = ({ data }) => {
                       href="#"
                     >
                       <span className="icon-reverse-wrapper">
-                        <span className="btn-text">Apply Now</span>
+                        <Link href="/apply-now">
+                          <span className="btn-text">Apply Now</span>
+                        </Link>
                         <span className="btn-icon">
                           <i className="feather-arrow-right"></i>
                         </span>
