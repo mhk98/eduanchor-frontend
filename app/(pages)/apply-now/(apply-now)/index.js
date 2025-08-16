@@ -208,7 +208,7 @@ const ApplyNowPage = () => {
               )}
             </div>
 
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
               <label htmlFor="date" className="form-label fw-semibold fs-4">
                 Date of Birth
               </label>
@@ -218,7 +218,7 @@ const ApplyNowPage = () => {
                 className="form-control"
                 {...register("date")}
               />
-            </div>
+            </div> */}
 
             <div className="col-md-6">
               <label
@@ -256,7 +256,7 @@ const ApplyNowPage = () => {
                 </small>
               )}
             </div>
-
+            {/* 
             <div className="col-md-6">
               <label htmlFor="address" className="form-label fw-semibold fs-4">
                 Full Address
@@ -308,7 +308,7 @@ const ApplyNowPage = () => {
                   IELTS Score selection is required
                 </small>
               )}
-            </div>
+            </div> */}
 
             <div className="col-md-6">
               <label htmlFor="location" className="form-label fw-semibold fs-4">
@@ -331,7 +331,7 @@ const ApplyNowPage = () => {
                 </small>
               )}
             </div>
-
+            {/* 
             <div className="col-md-6">
               <label
                 htmlFor="applicationCode"
@@ -349,9 +349,7 @@ const ApplyNowPage = () => {
                   Application Code is required
                 </small>
               )}
-            </div>
-
-            {/* Academic Info */}
+            </div>        
             <div className="col-md-6">
               <label htmlFor="sscYear" className="form-label fw-semibold fs-4">
                 SSC Year
@@ -443,7 +441,6 @@ const ApplyNowPage = () => {
               )}
             </div>
 
-            {/* Bachelor Info */}
             <div className="col-md-6">
               <label
                 htmlFor="bachelorYear"
@@ -483,7 +480,7 @@ const ApplyNowPage = () => {
                 className="form-control fs-4"
                 {...register("bachelorCGPA")}
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Checkboxes */}
