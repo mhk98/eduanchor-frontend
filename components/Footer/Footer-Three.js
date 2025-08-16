@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "../../public/images/logo/logo.png";
+import logo from "../../public/images/logo/logo.jpg";
 import logoLight from "../../public/images/dark/logo/logo-light.png";
 
 import FooterData from "../../data/footer.json";
@@ -23,14 +23,14 @@ const FooterThree = () => {
                     <div className="footer-widget">
                       <div className="fw-bold title">
                         <Link href="/">
-                          {/* <Image
+                          <Image
                             src={logo}
                             width={152}
                             height={50}
                             priority={true}
                             alt="Education Logo Images"
-                          /> */}
-                          EA CONSULTANCY
+                          />
+                          {/* EA CONSULTANCY */}
                         </Link>
                       </div>
 
