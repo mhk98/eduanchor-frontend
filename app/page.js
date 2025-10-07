@@ -2,8 +2,8 @@
 // import HomePage from "./01-main-demo/page";
 
 // export const metadata = {
-//   title: "Home - Online Courses & Education NEXTJS14 Template",
-//   description: "Online Courses & Education NEXTJS14 Template",
+//   title: "Home - We open the world for you, don't limit yourself, be borderless!",
+//   description: "We open the world for you, don't limit yourself, be borderless!",
 // };
 
 // export default function Home() {
@@ -19,8 +19,10 @@ import BackToTop from "./backToTop";
 import HomePage from "./01-main-demo/page";
 
 export const metadata = {
-  title: "Home - Online Courses & Education NEXTJS14 Template",
-  description: "Online Courses & Education NEXTJS14 Template",
+  title:
+    "Home - We open the world for you, don't limit yourself, be borderless!",
+  description:
+    "We open the world for you, don't limit yourself, be borderless!",
 };
 
 export default async function Home() {
