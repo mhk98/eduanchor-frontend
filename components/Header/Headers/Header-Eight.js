@@ -9,8 +9,7 @@ import Search from "../Offcanvas/Search";
 import Category from "../Category/Category";
 import Nav from "../Nav";
 
-import logo from "../../../public/images/logo/logo.png";
-import logoLight from "../../../public/images/dark/logo/logo-light.png";
+import logo from "../../../public/images/EAC LOGO/Eac logo new v1.png";
 import { useAppContext } from "@/context/Context";
 
 const HeaderEight = ({
@@ -52,28 +51,18 @@ const HeaderEight = ({
             <div className="header-left rbt-header-content">
               <div className="header-info">
                 <div className="logo">
-                  {/* <Link href="/">
-                    {isLightTheme ? (
-                      <Image
-                        src={logo}
-                        width={152}
-                        height={50}
-                        priority={true}
-                        alt="Education Logo Images"
-                      />
-                    ) : (
-                      <Image
-                        src={logoLight}
-                        width={152}
-                        height={50}
-                        priority={true}
-                        alt="Education Logo Images"
-                      />
-                    )}
-                  </Link> */}
                   <Link href="/">
-                    <h3 className="logo-text">EA CONSULTANCY</h3>
+                    <Image
+                      src={logo}
+                      width={152}
+                      height={50}
+                      priority={true}
+                      alt="Education Logo Images"
+                    />
                   </Link>
+                  {/* <Link href="/">
+                    <h3 className="logo-text">EA CONSULTANCY</h3>
+                  </Link> */}
                 </div>
               </div>
 

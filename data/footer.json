@@ -7,64 +7,58 @@
       "address": "North America, USA",
       "usefulLinks": [
         {
-          "text": "Marketplace",
+          "text": "USA",
           "link": "/12-marketplace"
         },
         {
-          "text": "kindergarten",
-          "link": "/04-kindergarten"
+          "text": "Germany",
+          "link": "/germany"
         },
         {
-          "text": "University",
-          "link": "/13-university-classic"
+          "text": "Canada",
+          "link": "/canada"
         },
         {
-          "text": "Classic Lms",
-          "link": "/05-classic-lms"
+          "text": "Australia",
+          "link": "/australia"
         },
         {
-          "text": "FAQ",
-          "link": "/pages/faqs"
+          "text": "Hungary",
+          "link": "/hungary"
         }
       ],
       "ourCompany": [
         {
-          "text": "Contact Us",
-          "link": "/contact"
+          "text": "Service",
+          "link": "/admission-guide"
         },
         {
-          "text": "Become Teacher",
-          "link": "/become-a-teacher"
+          "text": "Our Team",
+          "link": "/about-us-02"
         },
-        {
+         {
           "text": "Blog",
           "link": "/blog-list"
         },
         {
-          "text": "Instructor",
-          "link": "/elements/team"
-        },
-        {
-          "text": "Events",
-          "link": "/pages/event-list"
+          "text": "Contact Us",
+          "link": "/contact"
         }
+       
+        
       ],
       "socialLink": [
         {
           "icon": "feather-facebook",
-          "link": "https://www.facebook.com/"
+          "link": "https://www.facebook.com/eaconsultancy.info"
         },
         {
-          "icon": "feather-twitter",
-          "link": "https://www.twitter.com"
-        },
-        {
-          "icon": "feather-instagram",
-          "link": "https://www.instagram.com/"
+          "icon": "feather-youtube",
+          "link": "https://www.youtube.com/@EAConsultancy-Bangladesh"
         },
         {
           "icon": "feather-linkedin",
-          "link": "https://www.linkdin.com/"
+          "link": "https://www.linkedin.com/company/eaconsultancy/posts/?feedView=all"
         }
       ]
     }

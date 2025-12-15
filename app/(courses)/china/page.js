@@ -61,8 +61,6 @@
 //             checkMatchCourses={checkMatch !== undefined ? checkMatch : ""}
 //           />
 
-        
-
 //           <Separator />
 //           <FooterOne />
 //         </Context>
@@ -72,8 +70,6 @@
 // };
 
 // export default CanadaPage;
-
-
 
 "use client";
 
@@ -95,24 +91,25 @@ import CourseActionBottom from "@/components/Course-Details/Course-Sections/Cour
 import SimilarCourses from "@/components/Course-Details/Course-Sections/SimilarCourses";
 import CourseDetailsTwo from "@/components/Course-Details/CourseDetails-Two";
 import CanadaDetails from "@/components/Course-Details/Canada-Details";
+import ChinaDetails from "@/components/Course-Details/China-Details";
 
 const CanadaPage = ({ getParams }) => {
-//   const router = useRouter();
-//   const postId = parseInt(getParams.courseId);
-//   const courseList = JSON.parse(JSON.stringify(CourseData.courseTab));
+  //   const router = useRouter();
+  //   const postId = parseInt(getParams.courseId);
+  //   const courseList = JSON.parse(JSON.stringify(CourseData.courseTab));
 
-//   const checkMatch = courseList.find((course) => course.id === postId);
+  //   const checkMatch = courseList.find((course) => course.id === postId);
 
-//   useEffect(() => {
-//     if (postId && checkMatch === undefined) {
-//       router.push("/course-card-2");
-//     }
+  //   useEffect(() => {
+  //     if (postId && checkMatch === undefined) {
+  //       router.push("/course-card-2");
+  //     }
 
-//     sal({
-//       threshold: 0.01,
-//       once: true,
-//     });
-//   }, [checkMatch, router]);
+  //     sal({
+  //       threshold: 0.01,
+  //       once: true,
+  //     });
+  //   }, [checkMatch, router]);
 
   return (
     <Provider store={Store}>
@@ -124,8 +121,8 @@ const CanadaPage = ({ getParams }) => {
         <div className="rbt-section-overlayping-top rbt-section-gapBottom mt-8">
           <div className="inner">
             <div className="container">
-              <CanadaDetails
-                // checkMatchCourses={checkMatch !== undefined ? checkMatch : ""}
+              <ChinaDetails
+              // checkMatchCourses={checkMatch !== undefined ? checkMatch : ""}
               />
             </div>
           </div>

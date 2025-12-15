@@ -125,25 +125,54 @@ fieldset:disabled {
 
 
     // Gradient varient 
+    // &.btn-gradient {
+    //     color: var(--color-white);
+    //     background-size: 300% 100%;
+    //     background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-secondary), var(--color-primary));
+
+    //     &.btn-gradient-2 {
+    //         background-image: linear-gradient(to right, var(--color-pink), var(--color-violet), var(--color-violet), var(--color-pink));
+    //     }
+
+    //     &.btn-gradient-3 {
+    //         background-image: linear-gradient(to right, var(--color-secondary), var(--color-primary), var(--color-primary), var(--color-secondary));
+    //     }
+
+    //     &:hover {
+    //         background-color: inherit;
+    //         background-position: 102% 0;
+    //         transition: all .4s ease-in-out;
+    //     }
+    // }
+
+
     &.btn-gradient {
-        color: var(--color-white);
-        background-size: 300% 100%;
-        background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-secondary), var(--color-primary));
+    color: white;
+    background-size: 300% 100%;
+    background-image: linear-gradient(
+        to right,
+        red,
+        black,
+        black,
+        red
+    );
 
-        &.btn-gradient-2 {
-            background-image: linear-gradient(to right, var(--color-pink), var(--color-violet), var(--color-violet), var(--color-pink));
-        }
-
-        &.btn-gradient-3 {
-            background-image: linear-gradient(to right, var(--color-secondary), var(--color-primary), var(--color-primary), var(--color-secondary));
-        }
-
-        &:hover {
-            background-color: inherit;
-            background-position: 102% 0;
-            transition: all .4s ease-in-out;
-        }
+    &.btn-gradient-red-black {
+        background-image: linear-gradient(
+            to right,
+            #ff0000,
+            #000000,
+            #000000,
+            #ff0000
+        );
     }
+
+    &:hover {
+        background-color: inherit;
+        background-position: 102% 0;
+        transition: all 0.4s ease-in-out;
+    }
+}
 
 
     // Marquee 

@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import HeaderTopData from "../../../data/headerTop";
 import { useAppContext } from "@/context/Context";
+import { FaYoutube } from "react-icons/fa";
 
 const HeaderTopEight = ({
   bgColor,
@@ -114,7 +115,8 @@ const HeaderTopEight = ({
                             </li>
                             <li>
                               <Link href="https://www.youtube.com/@EAConsultancy-Bangladesh">
-                                <i className="fa-brands fa-youtube text-red"></i>
+                                {/* <i className="fa-brands fa-youtube text-red"></i> */}
+                                <FaYoutube />
                               </Link>
                             </li>
                           </ul>
