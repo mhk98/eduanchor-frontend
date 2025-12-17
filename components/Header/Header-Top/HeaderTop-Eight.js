@@ -35,34 +35,21 @@ const HeaderTopEight = ({
                     <div className="rbt-header-content">
                       <div className="header-info">
                         <ul className="rbt-information-list">
-                          {/* <li>
-                            <Link href="#">
-                              <i className="fab fa-instagram"></i>
-                              {item.insFollowers}k
-                              <span className="d-none d-xxl-block">
-                                {item.type}
-                              </span>
-                            </Link>
-                          </li>
                           <li>
-                            <Link href="#">
-                              <i className="fab fa-facebook-square"></i>
-                              {item.fbFollowers}k
-                              <span className="d-none d-xxl-block">
-                                {item.type}
-                              </span>
-                            </Link>
-                          </li> */}
-                          {router.pathname === "/10-online-course" ? (
-                            ""
-                          ) : (
-                            <li>
-                              <Link href="#">
-                                <i className="feather-phone"></i>
-                                {item.phone}
-                              </Link>
-                            </li>
-                          )}
+                            {/* <Link href="#">
+                              <i className="feather-phone"></i>
+                              {item.phone}
+                            </Link> */}
+                            <marquee
+                              direction="left"
+                              style={{ color: "white" }}
+                            >
+                              <b>Khulna</b> &nbsp; +8801618274549 &nbsp;
+                              <b>Satkhira</b> &nbsp; +8801751073544 &nbsp;
+                              <b>Jashore</b> &nbsp; +8801901851387 &nbsp;
+                              <b>Dhaka</b> &nbsp; +8801882888980 &nbsp;
+                            </marquee>
+                          </li>
                         </ul>
                       </div>
                     </div>
