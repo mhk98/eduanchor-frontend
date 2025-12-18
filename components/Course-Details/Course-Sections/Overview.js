@@ -7,7 +7,7 @@ import { FaGraduationCap, FaUniversity } from "react-icons/fa";
 const Overview = ({ checkMatchCourses }) => {
   const pathname = usePathname();
   const [toggle, setToggle] = useState(false);
-  const { title, desc, descTwo, overviewList } = checkMatchCourses;
+  // const { title, desc, descTwo, overviewList } = checkMatchCourses;
 
   const addClass = ["/course-detail-8"].some((path) =>
     pathname.startsWith(path)
@@ -21,20 +21,24 @@ const Overview = ({ checkMatchCourses }) => {
         id="overview"
       >
         <div className="rbt-course-feature-inner has-show-more-inner-content">
-
           <div className="d-flex align-items-center gap-3">
-          <h5>< FaGraduationCap/></h5>
-          <h5>Overview</h5>
+            <h5>
+              <FaGraduationCap />
+            </h5>
+            <h5>Overview</h5>
           </div>
           <div className="section-title">
-            <h4 className="rbt-title-style-3">🇺🇸 Study in the USA – A Guide for Bangladeshi Students
+            <h4 className="rbt-title-style-3">
+              🇺🇸 Study in the USA – A Guide for Bangladeshi Students
             </h4>
           </div>
-          <p>The United States is a premier destination for international students, offering diverse academic programs,
-             cutting-edge research opportunities, and a multicultural environment. With over 4,000 accredited institutions,
-              students can choose from a wide range of disciplines and degree levels.</p>
-
-      
+          <p>
+            The United States is a premier destination for international
+            students, offering diverse academic programs, cutting-edge research
+            opportunities, and a multicultural environment. With over 4,000
+            accredited institutions, students can choose from a wide range of
+            disciplines and degree levels.
+          </p>
         </div>
         {/* <div
           className={`rbt-show-more-btn ${toggle ? "active" : ""}`}

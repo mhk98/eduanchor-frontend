@@ -49,10 +49,9 @@ const ChinaDetails = ({ checkMatchCourses }) => {
               <ChinaMenu />
             </div>
 
-            {checkMatchCourses &&
-              checkMatchCourses.courseOverview.map((data, index) => (
-                <ChinaOverview {...data} key={index} checkMatchCourses={data} />
-              ))}
+            <div id="overview">
+              <ChinaOverview />
+            </div>
 
             <div
               className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
@@ -60,7 +59,11 @@ const ChinaDetails = ({ checkMatchCourses }) => {
             >
               {checkMatchCourses &&
                 checkMatchCourses.courseContent.map((data, index) => (
-                  <ChinaContent {...data} key={index} checkMatchCourses={data} />
+                  <ChinaContent
+                    {...data}
+                    key={index}
+                    checkMatchCourses={data}
+                  />
                 ))}
             </div>
 
@@ -69,14 +72,14 @@ const ChinaDetails = ({ checkMatchCourses }) => {
               id="details"
             >
               <div className="row g-5">
-                  <ChinaRequirements/>
+                <ChinaRequirements />
               </div>
             </div>
             <div
               className="rbt-instructor rbt-shadow-box intructor-wrapper mt--30"
               id="intructor"
             >
-                <ChinaVisa/>
+              <ChinaVisa />
             </div>
             <div
               className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"

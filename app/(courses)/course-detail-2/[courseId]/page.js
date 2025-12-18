@@ -7,6 +7,7 @@ export const metadata = {
 };
 
 const SingleCourseLayoutTwo = ({ params }) => {
+  console.log("SingleCourseLayoutTwo", params);
   return (
     <>
       <SingleCourse getParams={params} />

@@ -14,6 +14,7 @@ import React from "react";
 import { Provider } from "react-redux";
 
 import AccountInfo from "../../../../data/myAccount.json";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const MyAccountPage = () => {
   return (
@@ -46,7 +47,7 @@ const MyAccountPage = () => {
           </div>
 
           <Separator />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>

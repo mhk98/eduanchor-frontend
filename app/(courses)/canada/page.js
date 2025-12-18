@@ -18,6 +18,7 @@ import CourseActionBottom from "@/components/Course-Details/Course-Sections/Cour
 import SimilarCourses from "@/components/Course-Details/Course-Sections/SimilarCourses";
 import CourseDetailsTwo from "@/components/Course-Details/CourseDetails-Two";
 import CanadaDetails from "@/components/Course-Details/Canada-Details";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const CanadaPage = ({ getParams }) => {
   //   const router = useRouter();
@@ -58,7 +59,7 @@ const CanadaPage = ({ getParams }) => {
         /> */}
 
         <Separator />
-        <FooterOne />
+        <FooterThree />
       </Context>
     </Provider>
   );

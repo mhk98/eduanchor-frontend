@@ -57,7 +57,6 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
       </div> */}
 
       <div className="row row--30 gy-5 pt--60">
-        
         <div className="col-lg-5">
           <div className="course-sidebar sticky-top rbt-shadow-box rbt-gradient-border">
             <div className="inner">
@@ -76,19 +75,21 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
               <CourseMenu />
             </div>
 
-            {checkMatchCourses &&
-              checkMatchCourses.courseOverview.map((data, index) => (
-                <Overview {...data} key={index} checkMatchCourses={data} />
-              ))}
+            <div id="usaoverview">
+              {/* {checkMatchCourses &&
+                checkMatchCourses.courseOverview.map((data, index) => ( */}
+              <Overview />
+              {/* ))} */}
+            </div>
 
             <div
               className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
               id="coursecontent"
             >
-              {checkMatchCourses &&
-                checkMatchCourses.courseContent.map((data, index) => (
-                  <Content {...data} key={index} checkMatchCourses={data} />
-                ))}
+              {/* {checkMatchCourses &&
+                checkMatchCourses.courseContent.map((data, index) => ( */}
+              <Content />
+              {/* ))} */}
             </div>
 
             <div
@@ -105,7 +106,7 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
                     />
                   ))} */}
 
-                  <Requirements/>
+                <Requirements />
               </div>
             </div>
             <div
@@ -117,7 +118,7 @@ const CourseDetailsTwo = ({ checkMatchCourses }) => {
                   <Instructor {...data} key={index} checkMatchCourses={data} />
                 ))} */}
 
-                <Instructor/>
+              <Instructor />
             </div>
             <div
               className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"

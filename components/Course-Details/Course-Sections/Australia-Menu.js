@@ -13,7 +13,7 @@ const AustraliaMenu = () => {
   );
 
   const sections = [
-    { id: "overview", label: "Overview" },
+    { id: "australiaOverview", label: "Overview" },
     { id: "coursecontent", label: "Universities" },
     { id: "details", label: "Admission Requirements" },
     { id: "intructor", label: "Visa Processing" },
@@ -22,7 +22,7 @@ const AustraliaMenu = () => {
 
   useEffect(() => {
     const sectionIds = [
-      "overview",
+      "australiaOverview",
       "coursecontent",
       "details",
       "intructor",

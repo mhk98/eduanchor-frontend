@@ -13,7 +13,7 @@ const BelgiumMenu = () => {
   );
 
   const sections = [
-    { id: "overview", label: "Overview" },
+    { id: "belgiumOverview", label: "Overview" },
     { id: "coursecontent", label: "Universities" },
     { id: "details", label: "Admission Requirements" },
     { id: "intructor", label: "Visa Processing" },
@@ -22,7 +22,7 @@ const BelgiumMenu = () => {
 
   useEffect(() => {
     const sectionIds = [
-      "overview",
+      "belgiumOverview",
       "coursecontent",
       "details",
       "intructor",

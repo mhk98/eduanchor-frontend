@@ -49,11 +49,9 @@ const UKDetails = ({ checkMatchCourses }) => {
               <UKMenu />
             </div>
 
-            {checkMatchCourses &&
-              checkMatchCourses.courseOverview.map((data, index) => (
-                <UKOverview {...data} key={index} checkMatchCourses={data} />
-              ))}
-
+            <div id="ukOverview">
+              <UKOverview />
+            </div>
             <div
               className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
               id="coursecontent"
@@ -69,14 +67,14 @@ const UKDetails = ({ checkMatchCourses }) => {
               id="details"
             >
               <div className="row g-5">
-                  <UKRequirements/>
+                <UKRequirements />
               </div>
             </div>
             <div
               className="rbt-instructor rbt-shadow-box intructor-wrapper mt--30"
               id="intructor"
             >
-                <UKVisa/>
+              <UKVisa />
             </div>
             <div
               className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"

@@ -49,10 +49,9 @@ const DenmarkDetails = ({ checkMatchCourses }) => {
               <DenmarkMenu />
             </div>
 
-            {checkMatchCourses &&
-              checkMatchCourses.courseOverview.map((data, index) => (
-                <DenmarkOverview {...data} key={index} checkMatchCourses={data} />
-              ))}
+            <div id="overview">
+              <DenmarkOverview />
+            </div>
 
             <div
               className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
@@ -60,7 +59,11 @@ const DenmarkDetails = ({ checkMatchCourses }) => {
             >
               {checkMatchCourses &&
                 checkMatchCourses.courseContent.map((data, index) => (
-                  <DenmarkContent {...data} key={index} checkMatchCourses={data} />
+                  <DenmarkContent
+                    {...data}
+                    key={index}
+                    checkMatchCourses={data}
+                  />
                 ))}
             </div>
 
@@ -69,14 +72,14 @@ const DenmarkDetails = ({ checkMatchCourses }) => {
               id="details"
             >
               <div className="row g-5">
-                  <DenmarkRequirements/>
+                <DenmarkRequirements />
               </div>
             </div>
             <div
               className="rbt-instructor rbt-shadow-box intructor-wrapper mt--30"
               id="intructor"
             >
-                <DenmarkVisa/>
+              <DenmarkVisa />
             </div>
             <div
               className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"

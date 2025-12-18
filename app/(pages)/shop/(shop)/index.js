@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Shop from "@/components/Shop/Shop";
 import FooterOne from "@/components/Footer/Footer-One";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const ShopPage = () => {
   return (
@@ -23,7 +24,7 @@ const ShopPage = () => {
           <Shop />
 
           <Separator />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>

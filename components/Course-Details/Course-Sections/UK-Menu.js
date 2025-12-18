@@ -13,7 +13,7 @@ const UKMenu = () => {
   );
 
   const sections = [
-    { id: "overview", label: "Overview" },
+    { id: "ukOverview", label: "Overview" },
     { id: "coursecontent", label: "Universities" },
     { id: "details", label: "Admission Requirements" },
     { id: "intructor", label: "Visa Processing" },
@@ -22,7 +22,7 @@ const UKMenu = () => {
 
   useEffect(() => {
     const sectionIds = [
-      "overview",
+      "ukOverview",
       "coursecontent",
       "details",
       "intructor",

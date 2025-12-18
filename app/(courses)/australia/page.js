@@ -92,6 +92,7 @@ import SimilarCourses from "@/components/Course-Details/Course-Sections/SimilarC
 import CourseDetailsTwo from "@/components/Course-Details/CourseDetails-Two";
 import CanadaDetails from "@/components/Course-Details/Canada-Details";
 import AustraliaDetails from "@/components/Course-Details/Australia-Details";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const CanadaPage = ({ getParams }) => {
   //   const router = useRouter();
@@ -132,7 +133,7 @@ const CanadaPage = ({ getParams }) => {
         /> */}
 
         <Separator />
-        <FooterOne />
+        <FooterThree />
       </Context>
     </Provider>
   );

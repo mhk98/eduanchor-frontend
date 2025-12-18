@@ -16,6 +16,7 @@ import CallToActionFour from "@/components/Call-To-Action/CallToAction-Four";
 import FooterOne from "@/components/Footer/Footer-One";
 
 import EventData from "../../../data/events.json";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const SingleEvent = ({ getParams }) => {
   const router = useRouter();
@@ -59,7 +60,7 @@ const SingleEvent = ({ getParams }) => {
             <CallToActionFour btnClass="rbt-btn btn-gradient hover-icon-reverse" />
           </div>
 
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>

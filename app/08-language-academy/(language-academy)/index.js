@@ -10,6 +10,7 @@ import Cart from "@/components/Header/Offcanvas/Cart";
 import LanguageAcademy from "@/components/08-language-academy/LanguageAcademy";
 import HeaderStyleEight from "@/components/Header/HeaderStyle-Eight";
 import FooterOne from "@/components/Footer/Footer-One";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const LanguageAcademyPage = ({ getBlog }) => {
   return (
@@ -22,7 +23,7 @@ const LanguageAcademyPage = ({ getBlog }) => {
 
           <LanguageAcademy blogs={getBlog} />
 
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>

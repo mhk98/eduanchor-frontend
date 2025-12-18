@@ -49,10 +49,9 @@ const AustraliaDetails = ({ checkMatchCourses }) => {
               <AustraliaMenu />
             </div>
 
-            {checkMatchCourses &&
-              checkMatchCourses.courseOverview.map((data, index) => (
-                <AustraliaOverview {...data} key={index} checkMatchCourses={data} />
-              ))}
+            <div id="australiaOverview">
+              <AustraliaOverview />
+            </div>
 
             <div
               className="course-content rbt-shadow-box coursecontent-wrapper mt--30"
@@ -60,7 +59,11 @@ const AustraliaDetails = ({ checkMatchCourses }) => {
             >
               {checkMatchCourses &&
                 checkMatchCourses.courseContent.map((data, index) => (
-                  <AustraliaContent {...data} key={index} checkMatchCourses={data} />
+                  <AustraliaContent
+                    {...data}
+                    key={index}
+                    checkMatchCourses={data}
+                  />
                 ))}
             </div>
 
@@ -69,14 +72,14 @@ const AustraliaDetails = ({ checkMatchCourses }) => {
               id="details"
             >
               <div className="row g-5">
-                  <AustraliaRequirements/>
+                <AustraliaRequirements />
               </div>
             </div>
             <div
               className="rbt-instructor rbt-shadow-box intructor-wrapper mt--30"
               id="intructor"
             >
-                <AustraliaVisa/>
+              <AustraliaVisa />
             </div>
             <div
               className="rbt-review-wrapper rbt-shadow-box review-wrapper mt--30"

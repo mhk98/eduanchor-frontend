@@ -13,7 +13,7 @@ const GermanyMenu = () => {
   );
 
   const sections = [
-    { id: "overview", label: "Overview" },
+    { id: "germanyOverview", label: "Overview" },
     { id: "coursecontent", label: "Universities" },
     { id: "details", label: "Admission Requirements" },
     { id: "intructor", label: "Visa Processing" },
@@ -22,7 +22,7 @@ const GermanyMenu = () => {
 
   useEffect(() => {
     const sectionIds = [
-      "overview",
+      "germanyOverview",
       "coursecontent",
       "details",
       "intructor",
