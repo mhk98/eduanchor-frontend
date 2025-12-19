@@ -21,7 +21,10 @@ const History = ({ data }) => {
             <div className="col-lg-6 col-md-6 col-12">
               <div className="section-title text-start"></div>
             </div>
-            <div className="col-lg-6 col-md-6 col-12">
+            <div className="section-title text-center">
+              <h4 className="title">Requirements to Apply</h4>
+            </div>
+            {/* <div className="col-lg-6 col-md-6 col-12">
               <div className="read-more-btn text-start text-md-end">
                 <Link className="rbt-moderbt-btn" href="#">
                   <span className="moderbt-btn-text">
@@ -30,7 +33,7 @@ const History = ({ data }) => {
                   <i className="feather-arrow-right"></i>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="row mb--60">
             {/* <div className="col-lg-12">

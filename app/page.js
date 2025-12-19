@@ -20,9 +20,9 @@ import HomePage from "./01-main-demo/page";
 
 export const metadata = {
   title:
-    "Home - We open the world for you, don't limit yourself, be borderless!",
+    "EA Consultancy – Study Abroad Experts | Free Counselling & Visa Support",
   description:
-    "We open the world for you, don't limit yourself, be borderless!",
+    "EA Consultancy helps students achieve their dreams of studying abroad with free counselling, transparent processing, university applications, and visa support for Europe, UK, USA, Canada & more. Start your international education journey today!",
 };
 
 export default async function Home() {

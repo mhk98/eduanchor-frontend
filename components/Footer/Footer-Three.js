@@ -39,7 +39,7 @@ const FooterThree = () => {
                       <div className="contact-btn mt--30">
                         <Link
                           className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
-                          href="#"
+                          href="contact"
                         >
                           <div className="icon-reverse-wrapper">
                             <span className="btn-text">Contact With Us</span>
@@ -82,8 +82,8 @@ const FooterThree = () => {
                           </Link>
                         </li>
                         <li>
-                          <span>Location:</span> House EX3, Road 28, Nirala
-                          Abashik, 9000 Khulna
+                          <span>Location:</span> F-10 (1st Floor) Ramna Shopping
+                          Complex, Ramna, Dhaka- 1217
                         </li>
                       </ul>
                       <ul className="social-icon social-default icon-naked justify-content-start mt--20">

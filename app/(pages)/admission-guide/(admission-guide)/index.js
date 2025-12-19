@@ -13,6 +13,7 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import AdmissionArea from "@/components/Admission-Guide/AdmissionArea";
 import AdmissionContact from "@/components/Admission-Guide/AdmissionContact";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const AdmissionGuidePage = () => {
   return (
@@ -37,7 +38,7 @@ const AdmissionGuidePage = () => {
           </div>
 
           <Separator />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>

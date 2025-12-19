@@ -20,16 +20,16 @@ const CopyRight = () => {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-12">
               <ul className="copyright-link rbt-link-hover justify-content-center justify-content-lg-end mt_sm--10 mt_md--10">
                 <li>
-                  <Link href="#">Terms of service</Link>
+                  <Link href="admission-guide">Services</Link>
                 </li>
                 <li>
-                  <Link href="/privacy-policy">Privacy policy</Link>
+                  <Link href="/about-us-02">Our Team</Link>
                 </li>
                 <li>
-                  <Link href="/subscription">Subscription</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
                 <li>
-                  <Link href="/login">Login & Register</Link>
+                  <Link href="/blog">Blog</Link>
                 </li>
               </ul>
             </div>

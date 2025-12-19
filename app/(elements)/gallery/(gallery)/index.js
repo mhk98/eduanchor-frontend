@@ -10,6 +10,7 @@ import BreadCrumb from "@/components/Common/BreadCrumb";
 import FooterOne from "@/components/Footer/Footer-One";
 import Gallery from "@/components/Gallery/Gallery";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const GalleryPage = () => {
   return (
@@ -23,7 +24,7 @@ const GalleryPage = () => {
 
           <Gallery />
 
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>
