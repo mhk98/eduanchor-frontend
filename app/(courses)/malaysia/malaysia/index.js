@@ -1,9 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import sal from "sal.js";
-import CourseData from "../../../data/course-details/courseData.json";
+import React from "react";
 import { Provider } from "react-redux";
 import Store from "@/redux/store";
 import Context from "@/context/Context";
@@ -12,12 +9,6 @@ import MobileMenu from "@/components/Header/MobileMenu";
 import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import Separator from "@/components/Common/Separator";
-import FooterOne from "@/components/Footer/Footer-One";
-import CourseHead from "@/components/Course-Details/Course-Sections/course-head";
-import CourseActionBottom from "@/components/Course-Details/Course-Sections/Course-Action-Bottom";
-import SimilarCourses from "@/components/Course-Details/Course-Sections/SimilarCourses";
-import CourseDetailsTwo from "@/components/Course-Details/CourseDetails-Two";
-import CanadaDetails from "@/components/Course-Details/Canada-Details";
 import MalaysiaDetails from "@/components/Course-Details/Malaysia-Details";
 import FooterThree from "@/components/Footer/Footer-Three";
 
