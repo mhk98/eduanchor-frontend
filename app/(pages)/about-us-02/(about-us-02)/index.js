@@ -33,31 +33,31 @@ const AboutUsPageTwo = () => {
             </div>
           </div>
 
-          <Video />
+          <Video className="py-2" />
 
-          <div className="rbt-about-area about-style-1 bg-color-white rbt-section-gap">
+          {/* <div className="rbt-about-area about-style-1 bg-color-white rbt-section-gap">
             <div className="container">
               <AboutSix
                 btnClass="radius rbt-marquee-btn marquee-text-y"
                 btnText="Learn More"
               />
             </div>
-          </div>
-          <div className="rbt-call-to-action-area rbt-section-gap bg-gradient-8">
+          </div> */}
+          {/* <div className="rbt-call-to-action-area rbt-section-gap bg-gradient-8">
             <div className="rbt-callto-action rbt-cta-default style-6">
               <CallToActionSix />
             </div>
           </div>
           <div className="rbt-rbt-card-area bg-color-extra2 rbt-section-gap">
             <ServiceTwelve />
-          </div>
+          </div> */}
           <div className="rbt-team-area bg-gradient-8 rbt-section-gap">
             <TeamTen />
           </div>
-          <div className="rbt-brand-area bg-color-white rbt-section-gap">
+          {/* <div className="rbt-brand-area bg-color-white rbt-section-gap">
             <BrandThree />
           </div>
-          <Separator />
+          <Separator /> */}
 
           <FooterThree />
         </Context>

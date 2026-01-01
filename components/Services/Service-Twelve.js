@@ -29,7 +29,7 @@ const ServiceTwelve = ({ data }) => {
               <div className="inner">
                 <div className="icon mb-3">
                   <Image
-                    src={`https://server.eaconsultancy.info/${item.image}`}
+                    src={item.img}
                     width={60}
                     height={60}
                     alt={item.title || "Service Icon"}

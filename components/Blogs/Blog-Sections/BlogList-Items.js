@@ -11,9 +11,9 @@ const BlogListItems = ({ start, end, selectedBlog }) => {
             key={index}
           >
             <div className="rbt-card-img">
-              <Link href={`/blog-details/${item.slug}`}>
+              <Link href={`/post/${item.id}`}>
                 <Image
-                  src={item.thumbnail.large}
+                  src={`https://server.eaconsultancy.info/${item.image}`}
                   width={580}
                   height={300}
                   priority
@@ -23,13 +23,10 @@ const BlogListItems = ({ start, end, selectedBlog }) => {
             </div>
             <div className="rbt-card-body">
               <h5 className="rbt-card-title">
-                <Link href={`/blog-details/${item.slug}`}>{item.title}</Link>
+                <Link href={`/post/${item.id}`}>{item.title}</Link>
               </h5>
               <div className="rbt-card-bottom">
-                <Link
-                  className="transparent-button"
-                  href={`/blog-details/${item.slug}`}
-                >
+                <Link className="transparent-button" href={`/post/${item.id}`}>
                   Read Article
                   <i>
                     <svg

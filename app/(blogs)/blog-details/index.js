@@ -16,8 +16,9 @@ import Instagram from "@/components/Instagram/Instagram";
 import BlogBreadCrumb from "@/components/Common/Blog-BreadCrumb";
 
 export default function SingleBlog({ getAllblog }) {
+  console.log("getAllblog", getAllblog);
   const pathname = usePathname();
-
+  console.log("pathname", pathname);
   const extractNumberFromPathname = (pathname) => {
     const parts = pathname.split("/");
     const lastPart = parts[parts.length - 1];
@@ -65,4 +66,3 @@ export default function SingleBlog({ getAllblog }) {
     </>
   );
 }
-

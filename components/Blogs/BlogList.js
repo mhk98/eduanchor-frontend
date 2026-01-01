@@ -8,6 +8,8 @@ import BlogListItems from "./Blog-Sections/BlogList-Items";
 import Pagination from "../Common/Pagination";
 
 const BlogList = ({ isPagination, blogdata }) => {
+  console.log("blogdata", blogdata);
+
   const [blogs, setBlogs] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
@@ -42,9 +44,9 @@ const BlogList = ({ isPagination, blogdata }) => {
                 <div className="col-12 mt--30" key={index}>
                   <div className="rbt-card variation-02 height-auto rbt-hover">
                     <div className="rbt-card-img">
-                      <Link href={`/post-format-standard/${data.slug}`}>
+                      <Link href={`/post-format-standard/${data.id}`}>
                         <Image
-                          src={data.thumbnail.large}
+                          src={`https://server.eaconsultancy.info/${data.image}`}
                           width={1085}
                           height={645}
                           priority
@@ -55,15 +57,19 @@ const BlogList = ({ isPagination, blogdata }) => {
                     </div>
                     <div className="rbt-card-body">
                       <h3 className="rbt-card-title">
-                        <Link href={`/post-format-standard/${data.slug}`}>
+                        <Link href={`/post-format-standard/${data.id}`}>
                           {data.title}
                         </Link>
                       </h3>
-                      <p className="rbt-card-text">{data.desc}</p>
+                      {/* <p className="rbt-card-text">{data.desc}</p> */}
+                      <div
+                        className="prose"
+                        dangerouslySetInnerHTML={{ __html: data.content }}
+                      />
                       <div className="rbt-card-bottom">
                         <Link
                           className="transparent-button"
-                          href={`/post-format-standard/${data.slug}`}
+                          href={`/post-format-standard/${data.id}`}
                         >
                           Learn More
                           <i>

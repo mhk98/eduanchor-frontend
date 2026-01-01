@@ -1,80 +1,79 @@
-import React, { useEffect } from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Typed from "typed.js";
 
 const Banner = () => {
+  const [bannerData, setBannerData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch banner data from API
   useEffect(() => {
-    const typeitInstance = new Typed(".is-visible", {
-      strings: ["Mission.", "Vission", "Planning"],
+    const fetchBanner = async () => {
+      try {
+        const response = await fetch(
+          "https://server.eaconsultancy.info/api/v1/introduction"
+        );
+        const data = await response.json();
+        // Assuming the API returns an array, take the first banner
+        setBannerData(data.data?.[0] || null);
+      } catch (error) {
+        console.error("Error fetching banner:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  // Initialize Typed.js
+  useEffect(() => {
+    if (!bannerData) return;
+
+    const typeInstance = new Typed(".typed-text", {
+      strings: ["Mission.", "Vision.", "Planning."],
       typeSpeed: 80,
       backSpeed: 60,
       startDelay: 200,
-      loop: Infinity,
-      showCursor: false,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
     });
 
-    return () => {
-      typeitInstance.destroy();
-    };
-  }, []);
+    return () => typeInstance.destroy();
+  }, [bannerData]);
+
+  if (loading) return <p className="text-center py-10">Loading banner...</p>;
+  if (!bannerData)
+    return <p className="text-center py-10">No banner data found.</p>;
 
   return (
-    <>
-      <div className="row g-5 align-items-center">
-        <div className="col-lg-10 offset-lg-1">
-          <div className="content">
-            <div className="inner text-center">
-              <div className="rbt-new-badge rbt-new-badge-one">
-                <span className="rbt-new-badge-icon">🏆</span> The Leader in
-                Online Learning
-              </div>
-
-              <h1 className="title">
-                Read About Our
-                <span className="header-caption ms-2">
-                  <span className="cd-headline clip is-full-width">
-                    <span className="cd-words-wrapper">
-                      <b className="is-visible theme-gradient"></b>
-                    </span>
-                  </span>
-                </span>
-              </h1>
-              <p className="description has-medium-font-size mt--20">
-                Dive in and learn React.js from scratch! Learn Reactjs, Hooks,
-                Redux, React Routing, Animations, Next.js and way more!
-              </p>
-              <div className="slider-btn rbt-button-group justify-content-center">
-                <Link
-                  className="rbt-btn btn-gradient hover-icon-reverse"
-                  href="#"
-                >
-                  <span className="icon-reverse-wrapper">
-                    <span className="btn-text">Log in to Start</span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                  </span>
-                </Link>
-                <Link className="rbt-btn hover-icon-reverse btn-white" href="#">
-                  <span className="icon-reverse-wrapper">
-                    <span className="btn-text">Contact US</span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                    <span className="btn-icon">
-                      <i className="feather-arrow-right"></i>
-                    </span>
-                  </span>
-                </Link>
-              </div>
+    <div className="row g-5 align-items-center">
+      <div className="col-lg-10 offset-lg-1">
+        <div className="content text-center">
+          {bannerData.title && (
+            <div className="rbt-new-badge rbt-new-badge-one mb-3 inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-black">
+              <span className="rbt-new-badge-icon mr-2">🏆</span>
+              {bannerData.title}
             </div>
-          </div>
+          )}
+
+          {bannerData.subTitle && (
+            <h1 className="title text-4xl md:text-5xl font-bold mb-4">
+              {bannerData.subTitle}
+              <span className="typed-text text-gradient"></span>
+            </h1>
+          )}
+
+          {bannerData.text && (
+            <p className="description text-lg md:text-xl text-gray-600 mb-6">
+              {bannerData.text}
+            </p>
+          )}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

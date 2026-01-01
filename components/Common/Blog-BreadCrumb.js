@@ -7,12 +7,12 @@ const BlogBreadCrumb = ({ matchedBlog }) => {
   return (
     <>
       <div className="breadcrumb-image-container breadcrumb-style-max-width">
-        <div className="breadcrumb-image-wrapper">
+        {/* <div className="breadcrumb-image-wrapper">
           <div className="breadcrumb-dark">
             <Image src={bgImage} alt="Education Images" />
           </div>
-        </div>
-        <div className="breadcrumb-content-top text-center">
+        </div> */}
+        {/* <div className="breadcrumb-content-top text-center">
           <ul className="meta-list justify-content-center mb--10">
             <li className="list-item">
               <div className="author-thumbnail">
@@ -40,13 +40,13 @@ const BlogBreadCrumb = ({ matchedBlog }) => {
             {matchedBlog && (
               <li className="list-item">
                 <i className="feather-clock"></i>
-                <span>{matchedBlog.publishedAt}</span>
+                <span>{matchedBlog.createdAt}</span>
               </li>
             )}
           </ul>
           {matchedBlog && <h1 className="title">{matchedBlog.title}</h1>}
-          {matchedBlog && <p>{matchedBlog.desc}</p>}
-        </div>
+          {matchedBlog && <p>{matchedBlog.metaDescription}</p>}
+        </div> */}
       </div>
     </>
   );

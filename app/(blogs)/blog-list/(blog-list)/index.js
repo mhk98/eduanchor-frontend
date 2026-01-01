@@ -10,8 +10,10 @@ import BlogList from "@/components/Blogs/BlogList";
 import Separator from "@/components/Common/Separator";
 import FooterOne from "@/components/Footer/Footer-One";
 import Banner from "@/components/Common/Banner";
+import FooterThree from "@/components/Footer/Footer-Three";
 
 const BlogListPage = ({ getAllBlogs }) => {
+  console.log("getAllBlogs", getAllBlogs);
   return (
     <>
       <Provider store={Store}>
@@ -32,7 +34,7 @@ const BlogListPage = ({ getAllBlogs }) => {
           </div>
 
           <Separator />
-          <FooterOne />
+          <FooterThree />
         </Context>
       </Provider>
     </>
