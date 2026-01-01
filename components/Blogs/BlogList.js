@@ -40,7 +40,7 @@ const BlogList = ({ isPagination, blogdata }) => {
         <div className="row">
           <div className="col-lg-10 offset-lg-1 mt_dec--30">
             {blogdata &&
-              selectedBlogs.slice(0, 1).map((data, index) => (
+              selectedBlogs.slice(0, 1)?.map((data, index) => (
                 <div className="col-12 mt--30" key={index}>
                   <div className="rbt-card variation-02 height-auto rbt-hover">
                     <div className="rbt-card-img">

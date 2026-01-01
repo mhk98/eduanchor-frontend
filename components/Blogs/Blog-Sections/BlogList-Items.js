@@ -5,7 +5,7 @@ const BlogListItems = ({ start, end, selectedBlog }) => {
   return (
     <>
       {selectedBlog &&
-        selectedBlog.slice(start, end).map((item, index) => (
+        selectedBlog.slice(start, end)?.map((item, index) => (
           <div
             className="rbt-card card-list variation-02 rbt-hover mt--30"
             key={index}

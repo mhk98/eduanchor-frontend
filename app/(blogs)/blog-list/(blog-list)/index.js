@@ -8,7 +8,6 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import BlogList from "@/components/Blogs/BlogList";
 import Separator from "@/components/Common/Separator";
-import FooterOne from "@/components/Footer/Footer-One";
 import Banner from "@/components/Common/Banner";
 import FooterThree from "@/components/Footer/Footer-Three";
 
