@@ -36,7 +36,7 @@ const MultilingualHighlights = ({ data }) => {
       <div className="rbt-feature-area rbt-section-gap">
         <div className="container">
           <div className="row g-5">
-            {FeatureData.map((data, i) => (
+            {FeatureData?.map((data, i) => (
               <div className="col-xl-4 col-lg-6 col-md-6 col-12" key={i}>
                 <div className="rbt-feature-card">
                   <div className="d-sm-flex align-items-center gap-4">

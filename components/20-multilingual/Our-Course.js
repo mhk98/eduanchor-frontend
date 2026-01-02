@@ -41,7 +41,7 @@ const OurCourse = ({ data }) => {
                   id="rbt-myTab"
                   role="tablist"
                 >
-                  {getAllCourse.map((data, i) => (
+                  {getAllCourse?.map((data, i) => (
                     <Link href={data.url}>
                       <li
                         className="nav-item d-flex align-items-center gap-2"
