@@ -7,7 +7,6 @@ import Image from "next/image";
 import HeaderRightTwo from "../Header-Right/HeaderRight-Two";
 import Search from "../Offcanvas/Search";
 import Nav from "../Nav";
-
 import logo from "../../../public/images/EAC LOGO/Eac logo new v1.png";
 import { useAppContext } from "@/context/Context";
 

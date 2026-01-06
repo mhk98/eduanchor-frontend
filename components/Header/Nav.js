@@ -208,11 +208,8 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
-
 import MenuData from "../../data/MegaMenu.json";
-import addImage from "../../public/images/service/mobile-cat.jpg";
 
 const Nav = () => {
   const [activeMenuItem, setActiveMenuItem] = useState(null);
@@ -228,7 +225,7 @@ const Nav = () => {
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
         {/* Home */}
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="with-megamenu position-static">
           <Link
             className={isActive("/") ? "active" : ""}
             href="/"
@@ -255,7 +252,7 @@ const Nav = () => {
             {MenuData?.menuData.map((data) =>
               data.menuType === "default-dropdown"
                 ? data.menuItems?.map((value, innerIndex) => (
-                    <li className="has-dropdown" key={innerIndex}>
+                    <li className="" key={innerIndex}>
                       <Link
                         className={isActive(value.link) ? "active" : ""}
                         href={value.link}
@@ -270,7 +267,7 @@ const Nav = () => {
         </li>
 
         {/* Our Services */}
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="with-megamenu position-static">
           <Link
             href="/admission-guide"
             className={isActive("/admission-guide") ? "active" : ""}
@@ -281,7 +278,7 @@ const Nav = () => {
         </li>
 
         {/* Our Team */}
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="with-megamenu position-static">
           <Link
             href="/about-us-02"
             className={isActive("/about-us-02") ? "active" : ""}
@@ -291,8 +288,7 @@ const Nav = () => {
           </Link>
         </li>
 
-        {/* Our Team */}
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="with-megamenu position-static">
           <Link
             href="/gallery"
             className={isActive("/gallery") ? "active" : ""}
@@ -302,8 +298,18 @@ const Nav = () => {
           </Link>
         </li>
 
+        <li className="with-megamenu position-static">
+          <Link
+            href="/blog-list"
+            className={isActive("/blog-list") ? "active" : ""}
+            onClick={() => toggleMenuItem("blog-list")}
+          >
+            Blog
+          </Link>
+        </li>
+
         {/* Blogs */}
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="with-megamenu position-static">
           <Link
             href="/contact-us"
             className={isActive("/blog-minimal") ? "active" : ""}
