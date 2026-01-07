@@ -17,7 +17,7 @@ const BreadCrumb = ({ title, text }) => {
                     <i className="feather-chevron-right"></i>
                   </div>
                 </li>
-                <li className="rbt-breadcrumb-item active">{text}</li>
+                <li className="rbt-breadcrumb-item active">Our Services</li>
               </ul>
             </div>
           </div>

@@ -23,7 +23,7 @@ const AdmissionGuidePage = () => {
           <HeaderStyleTen headerSticky="rbt-sticky" headerType="" />
           <MobileMenu />
           <Cart />
-          <BreadCrumb title="Admission Guide" text="Admission Guide" />
+          <BreadCrumb title="Our Services" text="Our Services" />
 
           <div className="rbt-admission-area bg-color-white rbt-section-gapTop">
             <div className="container">

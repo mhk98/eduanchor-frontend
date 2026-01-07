@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import "venobox/dist/venobox.min.css";
 
-import videoImg from "../../public/images/others/video-04.jpg";
+import videoImg from "../../public/images/others/video.png";
 
 const AdmissionArea = () => {
   useEffect(() => {
@@ -40,27 +40,42 @@ const AdmissionArea = () => {
         </div>
         <div className="col-lg-6">
           <div className="addmission-guide-content pl--50 pl_sm--0 pl_md--0 pl_lg--0">
-            <h3 className="title">Guides to undergraduate study</h3>
+            <h3 className="title">What We Offer!</h3>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been.
+              EA Consultancy Ltd is a leading study abroad consultancy in
+              Bangladesh, providing expert guidance for students seeking
+              undergraduate and postgraduate education overseas. With offices in
+              Dhaka, Khulna, Satkhira, Jessore, and Feni, we make professional
+              education counseling accessible to students across the country.
             </p>
             <p>
-              When an unknown printer took a galley of type and scrambled it to
-              make a type specimen book. It has survived not only five
-              centuries.
+              Our experienced advisors offer end-to-end support, helping
+              students choose the right destination, university, and course
+              based on their academic background, career goals, and budget. We
+              are committed to delivering transparent, reliable, and
+              student-focused services.
             </p>
-            <h5>The goal should be more than money</h5>
+            <h5>Complete Study Abroad Consultancy Services</h5>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              As a trusted education consultancy in Dhaka, Khulna, Satkhira,
+              Jessore, and Feni, EA Consultancy Ltd assists students with
+              university selection, admission applications, SOP and
+              documentation preparation, visa guidance, and pre-departure
+              support.
+            </p>
+            <p>
+              We work closely with internationally recognized universities and
+              institutions, ensuring students receive up-to-date information and
+              the highest chance of admission success. Our structured process
+              simplifies complex application procedures and saves students
+              valuable time.
             </p>
             <div className="apply-btn">
               <a
                 className="rbt-btn btn-gradient radius-round icon-hover"
                 href="#"
               >
-                <span className="btn-text">Applying to University</span>
+                <span className="btn-text">Apply Now</span>
                 <span className="btn-icon">
                   <i className="feather-arrow-right"></i>
                 </span>
