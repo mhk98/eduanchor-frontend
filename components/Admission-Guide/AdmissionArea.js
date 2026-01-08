@@ -19,7 +19,7 @@ const AdmissionArea = () => {
   return (
     <>
       <div className="row g-5">
-        <div className="col-lg-6">
+        <div className="col-lg-12">
           <div className="video-popup-wrapper">
             <Image
               className="w-100 rbt-radius"
@@ -38,7 +38,7 @@ const AdmissionArea = () => {
             </Link>
           </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-12">
           <div className="addmission-guide-content pl--50 pl_sm--0 pl_md--0 pl_lg--0">
             <h3 className="title">What We Offer!</h3>
             <p>
@@ -69,6 +69,20 @@ const AdmissionArea = () => {
               the highest chance of admission success. Our structured process
               simplifies complex application procedures and saves students
               valuable time.
+            </p>
+
+            <h3>Education Beyond Financial Success</h3>
+            <p>
+              At EA Consultancy Ltd, we believe that education is more than just
+              earning potential. Our study abroad counseling focuses on
+              long-term career development, global exposure, and personal
+              growth.
+            </p>
+            <p>
+              By guiding students toward the right academic pathways, we help
+              them build a strong foundation for a successful international
+              future. Our mission is to empower students from Bangladesh to
+              achieve their global education dreams with confidence and clarity.
             </p>
             <div className="apply-btn">
               <a
