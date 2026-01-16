@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr">
       <body suppressHydrationWarning={true}>
         {/* Facebook Pixel Script */}
-        {/* {pixelId && (
+        {pixelId && (
           <Script
             id="fb-pixel-script"
             strategy="afterInteractive"
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
       `,
             }}
           />
-        )} */}
+        )}
 
         <noscript>
           <img

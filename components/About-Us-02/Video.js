@@ -61,11 +61,11 @@ const Video = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              {items.image && (
+              {items?.image && (
                 <div className="video-popup-wrapper">
                   <Image
                     className="w-100 rbt-radius"
-                    src={`https://server.eaconsultancy.info/${items.image}`}
+                    src={`https://server.eaconsultancy.info/${items?.image}`}
                     width={1170}
                     height={500}
                     alt="Video Images"

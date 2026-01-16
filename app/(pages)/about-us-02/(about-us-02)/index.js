@@ -9,12 +9,7 @@ import HeaderStyleTen from "@/components/Header/HeaderStyle-Ten";
 import MobileMenu from "@/components/Header/MobileMenu";
 import Cart from "@/components/Header/Offcanvas/Cart";
 import FooterThree from "@/components/Footer/Footer-Three";
-import BrandThree from "@/components/Brand/Brand-Three";
-import CallToActionSix from "@/components/Call-To-Action/CallToAction-Six";
-import AboutSix from "@/components/Abouts/About-Six";
-import ServiceTwelve from "@/components/Services/Service-Twelve";
 import TeamTen from "@/components/Team/TeamTen";
-import Separator from "@/components/Common/Separator";
 import Banner from "@/components/About-Us-02/Banner";
 import Video from "@/components/About-Us-02/Video";
 

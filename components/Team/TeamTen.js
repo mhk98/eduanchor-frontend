@@ -66,7 +66,7 @@ const TeamTen = () => {
                 href="#"
               >
                 <div className="icon-reverse-wrapper">
-                  <span className="btn-text">BECOME AN INSTRUCTOR</span>
+                  <span className="btn-text">Book an appointment now </span>
                   <span className="btn-icon">
                     <i className="feather-arrow-right"></i>
                   </span>
@@ -81,8 +81,8 @@ const TeamTen = () => {
 
         {/* Management Grid - INCREASED SIZES HERE */}
         <div className="row g-5 mb--60">
-          {Array.isArray(managements) &&
-            managements.map((data, index) => (
+          {Array?.isArray(managements) &&
+            managements?.map((data, index) => (
               <div
                 className={`${
                   data.isLarge
@@ -101,7 +101,7 @@ const TeamTen = () => {
                     <div className="thumb">
                       <Image
                         className="w-100"
-                        src={`https://server.eaconsultancy.info/${data.image}`}
+                        src={`https://server.eaconsultancy.info/${data?.image}`}
                         /* Increased Dimensions */
                         width={500}
                         height={650}
@@ -117,8 +117,8 @@ const TeamTen = () => {
         </div>
 
         {/* Management Modals */}
-        {Array.isArray(managements) &&
-          managements.map((data, index) => (
+        {Array?.isArray(managements) &&
+          managements?.map((data, index) => (
             <div
               className="rbt-team-modal modal fade rbt-modal-default"
               id={`mgmtModal${index}`}
@@ -144,7 +144,7 @@ const TeamTen = () => {
                           <div className="rbt-team-thumbnail">
                             <Image
                               className="w-100"
-                              src={`https://server.eaconsultancy.info/${data.image}`}
+                              src={`https://server.eaconsultancy.info/${data?.image}`}
                               width={415}
                               height={555}
                               alt={data.name}
@@ -156,7 +156,7 @@ const TeamTen = () => {
                             <div className="author-info">
                               <h4 className="title">{data.name}</h4>
                               <span className="designation theme-gradient">
-                                {data.designation}
+                                {data?.designation}
                               </span>
                             </div>
                             <ul className="social-icon social-default mt--20 justify-content-start">
@@ -183,8 +183,8 @@ const TeamTen = () => {
 
         {/* Employee Grid (Kept original sizes as requested) */}
         <div className="row g-5">
-          {Array.isArray(employee) &&
-            employee.map((data, index) => (
+          {Array?.isArray(employee) &&
+            employee?.map((data, index) => (
               <div
                 className={
                   data.isLarge
@@ -203,7 +203,7 @@ const TeamTen = () => {
                     <div className="thumb">
                       <Image
                         className="w-100"
-                        src={`https://server.eaconsultancy.info/${data.image}`}
+                        src={`https://server.eaconsultancy.info/${data?.image}`}
                         width={173}
                         height={231}
                         alt="Employee"

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import Typed from "typed.js";
 
 const Banner = () => {
@@ -17,7 +16,7 @@ const Banner = () => {
         );
         const data = await response.json();
         // Assuming the API returns an array, take the first banner
-        setBannerData(data.data?.[0] || null);
+        setBannerData(data?.data?.[0] || null);
       } catch (error) {
         console.error("Error fetching banner:", error);
       } finally {
@@ -52,23 +51,23 @@ const Banner = () => {
     <div className="row g-5 align-items-center">
       <div className="col-lg-10 offset-lg-1">
         <div className="content text-center">
-          {bannerData.title && (
+          {bannerData?.title && (
             <div className="rbt-new-badge rbt-new-badge-one mb-3 inline-flex items-center justify-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-black">
               <span className="rbt-new-badge-icon mr-2">🏆</span>
-              {bannerData.title}
+              {bannerData?.title}
             </div>
           )}
 
-          {bannerData.subTitle && (
+          {bannerData?.subTitle && (
             <h1 className="title text-4xl md:text-5xl font-bold mb-4">
-              {bannerData.subTitle}
+              {bannerData?.subTitle}
               {/* <span className="typed-text text-gradient"></span> */}
             </h1>
           )}
 
-          {bannerData.text && (
+          {bannerData?.text && (
             <p className="description text-lg md:text-xl text-gray-600 mb-6">
-              {bannerData.text}
+              {bannerData?.text}
             </p>
           )}
         </div>
