@@ -53,8 +53,10 @@ const TeamTen = () => {
         <div className="row mb--60 g-5 align-items-end">
           <div className="col-lg-6 col-md-6 col-12">
             <div className="section-title text-start">
-              <span className="subtitle bg-white-opacity">Our Instructor</span>
-              <h2 className="title color-white">Expert Instructor</h2>
+              <span className="subtitle bg-white-opacity">
+                Get your counselling done now
+              </span>
+              <h2 className="title color-white">Expert Counsellor</h2>
             </div>
           </div>
           <div className="col-lg-6 col-md-6 col-12">

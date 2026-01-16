@@ -20,7 +20,7 @@ const FooterThree = () => {
                   <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt--30">
                     <div className="footer-widget">
                       <div className="fw-bold title">
-                        <Link href="/">
+                        {/* <Link href="/">
                           <Image
                             src={logo}
                             width={152}
@@ -28,11 +28,12 @@ const FooterThree = () => {
                             priority={true}
                             alt="Education Logo Images"
                           />
-                          {/* EA CONSULTANCY */}
-                        </Link>
+                        </Link> */}
                       </div>
 
-                      <p className="description mt--20">{footer.description}</p>
+                      <p className="description mt--20">
+                        We Open The World For You!
+                      </p>
 
                       <div className="contact-btn mt--30">
                         <Link
