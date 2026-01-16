@@ -65,7 +65,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Script from "next/script";
 import "bootstrap/scss/bootstrap.scss";
 import "../public/scss/default/euclid-circulara.scss";
 
@@ -90,13 +89,13 @@ export default function RootLayout({ children }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
-  const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
+  // const pixelId = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
 
   return (
     <html lang="en" dir="ltr">
       <body suppressHydrationWarning={true}>
         {/* Facebook Pixel Script */}
-        {pixelId && (
+        {/* {pixelId && (
           <Script
             id="fb-pixel-script"
             strategy="afterInteractive"
@@ -124,7 +123,7 @@ export default function RootLayout({ children }) {
             style={{ display: "none" }}
             src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
           />
-        </noscript>
+        </noscript> */}
 
         {children}
       </body>
