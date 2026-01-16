@@ -36,22 +36,21 @@ const Video = () => {
     fetchBanner();
   }, []);
 
-  // Initialize Typed.js
-  useEffect(() => {
-    if (!items) return;
+  // useEffect(() => {
+  //   if (!items) return;
 
-    const typeInstance = new Typed(".typed-text", {
-      strings: ["Mission.", "Vision.", "Planning."],
-      typeSpeed: 80,
-      backSpeed: 60,
-      startDelay: 200,
-      loop: true,
-      showCursor: true,
-      cursorChar: "|",
-    });
+  //   const typeInstance = new Typed(".typed-text", {
+  //     strings: ["Mission.", "Vision.", "Planning."],
+  //     typeSpeed: 80,
+  //     backSpeed: 60,
+  //     startDelay: 200,
+  //     loop: true,
+  //     showCursor: true,
+  //     cursorChar: "|",
+  //   });
 
-    return () => typeInstance.destroy();
-  }, [items]);
+  //   return () => typeInstance.destroy();
+  // }, [items]);
 
   if (loading) return <p className="text-center py-10">Loading items...</p>;
   if (!items) return <p className="text-center py-10">No items data found.</p>;
