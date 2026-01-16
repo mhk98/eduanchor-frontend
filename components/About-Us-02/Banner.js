@@ -62,7 +62,7 @@ const Banner = () => {
           {bannerData.subTitle && (
             <h1 className="title text-4xl md:text-5xl font-bold mb-4">
               {bannerData.subTitle}
-              <span className="typed-text text-gradient"></span>
+              {/* <span className="typed-text text-gradient"></span> */}
             </h1>
           )}
 

@@ -5,8 +5,6 @@ import Typed from "typed.js";
 
 import "venobox/dist/venobox.min.css";
 
-import img from "../../public/images/bg/bg-image-12.jpg";
-
 const Video = () => {
   useEffect(() => {
     import("venobox/dist/venobox.min.js").then((venobox) => {
