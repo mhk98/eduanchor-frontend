@@ -42,7 +42,7 @@ const OurCourse = ({ data }) => {
                   role="tablist"
                 >
                   {getAllCourse?.map((data, i) => (
-                    <Link href={data.url}>
+                    <a href={data?.url}>
                       <li
                         className="nav-item d-flex align-items-center gap-2"
                         role="presentation"
@@ -58,7 +58,7 @@ const OurCourse = ({ data }) => {
                         </span>
                         <span className="btn-text">{data.title}</span>
                       </li>
-                    </Link>
+                    </a>
                   ))}
                 </ul>
               </div>
