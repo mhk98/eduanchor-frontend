@@ -705,7 +705,6 @@
 
 // export default Contact;
 
-
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { useState, useRef, useEffect } from "react";
@@ -736,7 +735,7 @@ const Contact = ({ data }) => {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) =>
-      payload.append(key, value)
+      payload.append(key, value),
     );
     if (file) payload.append("file", file);
     payload.append("captchaToken", captchaToken);
@@ -748,7 +747,7 @@ const Contact = ({ data }) => {
         {
           method: "POST",
           body: payload,
-        }
+        },
       );
 
       if (response.ok) {

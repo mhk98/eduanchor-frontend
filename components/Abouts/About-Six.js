@@ -4,7 +4,7 @@ import Typed from "typed.js";
 import { useEffect, useState } from "react";
 
 const AboutSix = ({ btnClass, btnText }) => {
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch banner data from API
@@ -12,11 +12,11 @@ const AboutSix = ({ btnClass, btnText }) => {
     const fetchBanner = async () => {
       try {
         const response = await fetch(
-          "https://server.eaconsultancy.info/api/v1/workstation"
+          "https://server.eaconsultancy.info/api/v1/workstation",
         );
         const data = await response.json();
         // Assuming the API returns an array, take the first banner
-        setItems(data.data?.[0] || null);
+        setItems(data?.data);
       } catch (error) {
         console.error("Error fetching banner:", error);
       } finally {

@@ -15,7 +15,7 @@ const Gallery = () => {
     const fetchGallery = async () => {
       try {
         const response = await fetch(
-          "https://server.eaconsultancy.info/api/v1/gallery"
+          "https://server.eaconsultancy.info/api/v1/gallery",
         );
         const data = await response.json();
         setGalleryData(data.data || []); // adjust based on your API response

@@ -28,7 +28,7 @@ const ContactUs = () => {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) =>
-      payload.append(key, value)
+      payload.append(key, value),
     );
     if (file) payload.append("file", file);
     payload.append("captchaToken", captchaToken);
@@ -40,7 +40,7 @@ const ContactUs = () => {
         {
           method: "POST",
           body: payload,
-        }
+        },
       );
 
       if (response.ok) {
@@ -75,7 +75,7 @@ const ContactUs = () => {
     const fetchBranches = async () => {
       try {
         const response = await fetch(
-          "https://server.eaconsultancy.info/api/v1/contact"
+          "https://server.eaconsultancy.info/api/v1/contact",
         );
 
         if (!response.ok) {

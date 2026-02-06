@@ -183,8 +183,6 @@ import ContactPage from "@/app/(pages)/contact/(contact)";
 import HowToApply from "../06-university-status/HowToApply";
 import History from "../03-online-school/History";
 import StudentFeedback from "../25-life-coach/StudentFeedback";
-import NewsletterTwo from "../Newsletters/Newsletter-Two";
-import BlogGridTop from "../Blogs/Blog-Sections/BlogGrid-Top";
 
 const MainDemo = ({
   blogs,

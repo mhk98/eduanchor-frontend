@@ -43,7 +43,7 @@ async function fetchBlogs() {
       "https://server.eaconsultancy.info/api/v1/blog",
       {
         cache: "no-store",
-      }
+      },
     );
 
     if (!response.ok) {

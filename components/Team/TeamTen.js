@@ -12,7 +12,7 @@ const TeamTen = () => {
     const fetchManagement = async () => {
       try {
         const res = await fetch(
-          "https://server.eaconsultancy.info/api/v1/management"
+          "https://server.eaconsultancy.info/api/v1/management",
         );
         const data = await res.json();
         setManagements(data.data || []);
@@ -29,7 +29,7 @@ const TeamTen = () => {
     const fetchEmployee = async () => {
       try {
         const res = await fetch(
-          "https://server.eaconsultancy.info/api/v1/employee"
+          "https://server.eaconsultancy.info/api/v1/employee",
         );
         const data = await res.json();
         setEmployee(data.data || []);

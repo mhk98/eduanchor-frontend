@@ -4,7 +4,7 @@ async function fetchBlog(slug) {
     `https://server.eaconsultancy.info/api/v1/blog/${slug}`,
     {
       cache: "no-store",
-    }
+    },
   );
 
   if (!res.ok) throw new Error("Blog not found");

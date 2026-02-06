@@ -33,7 +33,7 @@ export default function SingleBlog({ getAllblog }) {
           `https://server.eaconsultancy.info/api/v1/blog/${blogId}`,
           {
             cache: "no-store",
-          }
+          },
         );
         if (!response.ok) throw new Error("Failed to fetch");
 

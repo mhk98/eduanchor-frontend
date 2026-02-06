@@ -88,8 +88,10 @@ import "venobox/dist/venobox.min.css";
 
 const Video = () => {
   const venoboxRef = useRef(null);
-  const [items, setItems] = useState(null);
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  console.log("items", items);
 
   // ===============================
   // Fetch banner data
@@ -100,12 +102,12 @@ const Video = () => {
     const fetchBanner = async () => {
       try {
         const res = await fetch(
-          "https://server.eaconsultancy.info/api/v1/workstation"
+          "https://server.eaconsultancy.info/api/v1/workstation",
         );
         const json = await res.json();
 
         if (isMounted) {
-          setItems(json?.data?.[0] || null);
+          setItems(json?.data);
         }
       } catch (err) {
         console.error("Banner fetch error:", err);
