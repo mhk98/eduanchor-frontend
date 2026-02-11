@@ -38,7 +38,7 @@
 //     try {
 //       setIsSubmitting(true);
 //       const response = await fetch(
-//         "https://api.eaconsultancy.info/api/v1/contact/create",
+//         "https://api.eaconsultancy.org/api/v1/contact/create",
 //         {
 //           method: "POST",
 //           body: payload,
@@ -338,7 +338,7 @@
 //     try {
 //       setIsSubmitting(true);
 //       const response = await fetch(
-//         "https://api.eaconsultancy.info/api/v1/contact/create",
+//         "https://api.eaconsultancy.org/api/v1/contact/create",
 //         {
 //           method: "POST",
 //           body: payload,
@@ -743,7 +743,7 @@ const Contact = ({ data }) => {
     try {
       setIsSubmitting(true);
       const response = await fetch(
-        "https://api.eaconsultancy.info/api/v1/contact/create",
+        "https://api.eaconsultancy.org/api/v1/contact/create",
         {
           method: "POST",
           body: payload,

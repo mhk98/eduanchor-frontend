@@ -39,31 +39,31 @@ const HomePage = async () => {
     feedbackRes,
     contactRes,
   ] = await Promise.all([
-    fetch("https://server.eaconsultancy.info/api/v1/banner", {
+    fetch("https://server.eaconsultancy.org/api/v1/banner", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/feature", {
+    fetch("https://server.eaconsultancy.org/api/v1/feature", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/aboutUs", {
+    fetch("https://server.eaconsultancy.org/api/v1/aboutUs", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/country", {
+    fetch("https://server.eaconsultancy.org/api/v1/country", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/requirements", {
+    fetch("https://server.eaconsultancy.org/api/v1/requirements", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/requirement", {
+    fetch("https://server.eaconsultancy.org/api/v1/requirement", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/customize", {
+    fetch("https://server.eaconsultancy.org/api/v1/customize", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/feedback", {
+    fetch("https://server.eaconsultancy.org/api/v1/feedback", {
       cache: "no-store",
     }),
-    fetch("https://server.eaconsultancy.info/api/v1/contact", {
+    fetch("https://server.eaconsultancy.org/api/v1/contact", {
       cache: "no-store",
     }),
   ]);
